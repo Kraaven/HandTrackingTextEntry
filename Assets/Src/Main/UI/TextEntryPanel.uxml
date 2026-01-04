@@ -1,0 +1,17 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Src/Main/UI/TextEntryPanel.uss?fileID=7433441132597879392&amp;guid=7dce122e934d3a34987080ab0db09bd4&amp;type=3#TextEntryPanel"/>
+    <ui:VisualElement name="root" class="root">
+        <ui:VisualElement class="root-bg">
+            <ui:VisualElement class="foreground-bg">
+                <ui:VisualElement class="session-details-holder">
+                    <ui:Label text="Phase: " class="phase-number"/>
+                    <ui:Label text="PinchT9" class="session-input-type"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="divider"/>
+                <ui:Label text="what a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will do" class="panel-text phrase-text"/>
+                <ui:VisualElement class="divider"/>
+                <ui:Label text="" class="panel-text answer-text"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -13,4 +13,4 @@ public class FingerTipCollider : MonoBehaviour
 }
 
 public enum HandType { Left, Right}
-public enum FingerType { Thumb, Index, Middle, Ring, Little};
+public enum FingerType { Thumb, Index, Middle, Ring, Little};   

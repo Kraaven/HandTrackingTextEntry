@@ -1,0 +1,84 @@
+:root {
+}
+
+.root {
+    flex-grow: 1;
+}
+
+.root-bg {
+    flex-grow: 1;
+    background-color: rgba(17, 18, 20, 0.78);
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.foreground-bg {
+    flex-grow: 1;
+    background-color: rgba(43, 46, 52, 0.76);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.session-details-holder {
+    flex-grow: 0;
+    height: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.phase-number {
+    height: 100%;
+    font-size: 40px;
+    margin-left: 12px;
+    color: rgb(138, 144, 153);
+}
+
+.session-input-type {
+    height: 100%;
+    font-size: 40px;
+    margin-left: 4px;
+    margin-right: 12px;
+    color: rgb(138, 144, 153);
+}
+
+.divider {
+    flex-grow: 0;
+    height: 4px;
+    color: rgb(80, 101, 131);
+    background-color: rgb(80, 101, 131);
+    margin-left: 2px;
+    margin-right: 2px;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-bottom-left-radius: 1px;
+}
+
+.panel-text {
+    flex-grow: 1;
+    text-overflow: clip;
+    white-space: pre-wrap;
+    font-size: 35px;
+    -unity-text-align: middle-center;
+    -unity-font-definition: url("project://database/Assets/Src/Main/UI/SpaceMono-Regular.ttf?fileID=12800000&guid=e7f8b28681b55f841832e850a56f5d6f&type=3#SpaceMono-Regular");
+}
+
+.phrase-text {
+    color: rgb(216, 220, 226);
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.answer-text {
+    -unity-text-outline-color: rgba(0, 0, 0, 0);
+    text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.4);
+    color: rgb(131, 207, 153);
+}
