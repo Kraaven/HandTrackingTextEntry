@@ -7,8 +7,8 @@
                     <ui:Label text="Phase: " class="phase-number"/>
                     <ui:Label text="PinchT9" class="session-input-type"/>
                 </ui:VisualElement>
-                <ui:VisualElement class="divider"/>
-                <ui:Label text="what a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will dowhat a monkey sees a monkey will do" class="panel-text phrase-text"/>
+                <ui:VisualElement class="divider top-divider"/>
+                <ui:Label text="Content" class="panel-text phrase-text"/>
                 <ui:VisualElement class="divider"/>
                 <ui:Label text="" class="panel-text answer-text"/>
             </ui:VisualElement>

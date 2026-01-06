@@ -4,6 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     private TextEntrySession currentSession;
     private PhraseTrial currentTrial;
     private int currentTrialIndex;
+    private string[] totalPhrases;
 
     private void Awake()
     {
@@ -31,16 +33,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        SceneManager.sceneLoaded += (sce,mode) => { textHandler = FindFirstObjectByType<TextPanelHandler>(); };
+
         StartCoroutine(StreamingAssetsLoader.LoadTextFile("phrases.txt", (str) => {
-            string[] totalPhrases = str.Split('\n');
-
-            phrases = new List<string>();
-
-            for (int i = 0; i < numberOfTrials; i++)
-            {
-                phrases.Add(totalPhrases[UnityEngine.Random.Range(0, totalPhrases.Length)]);
-            }
-
+            totalPhrases = str.Split('\n');
             Debug.Log("Phrases Loaded");
         },
         (err) => { Debug.Log(err); }));
@@ -51,6 +47,17 @@ public class GameManager : MonoBehaviour
 
     public void StartSession()
     {
+
+        phrases = new List<string>();
+
+        for (int i = 0; i < numberOfTrials; i++)
+        {
+            phrases.Add(totalPhrases[UnityEngine.Random.Range(0, totalPhrases.Length)].ToLower());
+        }
+
+        textHandler.RemoveContentStyles();
+
+
         currentSession = new TextEntrySession
         {
             participantId = Guid.NewGuid().ToString(),
@@ -108,6 +115,10 @@ public class GameManager : MonoBehaviour
 
         string json = JsonConvert.SerializeObject(currentSession, Formatting.Indented);
         File.WriteAllText(Path.Combine(Application.dataPath,"session.json"), json);
+    }
+
+    public void ExitSession() {
+        SceneManager.LoadScene("Main");
     }
 
     // ================================

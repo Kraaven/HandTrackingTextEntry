@@ -35,6 +35,7 @@ public class TextPanelHandler : MonoBehaviour
         PhraseNumberText.text = "Phrase : 0";
         InputTypeText.text = "Undecided";
         TargetPhraseText.text = SessionInstructions;
+        TargetPhraseText.AddToClassList("content-text");                
     }
 
     // ================================
@@ -47,7 +48,7 @@ public class TextPanelHandler : MonoBehaviour
         userTypingText.Clear();
         formattedStringStack.Clear();
 
-        PhraseNumberText.text = $"Phrase: {phraseNumber}";
+        PhraseNumberText.text = $"Phrase: {phraseNumber}/{GameManager.Instance.phrases.Count}";
         InputTypeText.text = inputType;
         TargetPhraseText.text = phrase;
         TypedPhraseText.text = "";
@@ -56,6 +57,10 @@ public class TextPanelHandler : MonoBehaviour
     // ================================
     // TEXT INPUT
     // ================================
+
+    public void RemoveContentStyles() {
+        TargetPhraseText.RemoveFromClassList("content-text");
+    }
 
     public void InsertCharacter(string character)
     {
