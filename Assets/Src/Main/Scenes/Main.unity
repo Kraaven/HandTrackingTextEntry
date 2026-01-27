@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 373900092}
   - component: {fileID: 373900091}
   m_Layer: 5
-  m_Name: FloatingButton PinchT9
+  m_Name: FloatingButton Palm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063e25bbdd63f484eb21744799a8d16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  SceneToMoveTo: PinchT9
-  EntryType: 0
+  SceneToMoveTo: PalmWriting
+  EntryType: 1
 --- !u!65 &373900092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -991,9 +991,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PinchT9
-
-'
+  m_text: Palm Writing
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

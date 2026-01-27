@@ -39,7 +39,7 @@ public class TextEntrySession
 
 public enum EntryType{ 
     Standard,
-    PinchT9
+    PalmWriting
 }
 
 
