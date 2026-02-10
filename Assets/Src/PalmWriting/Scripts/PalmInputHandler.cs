@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using PDollarGestureRecognizer;
-
+using Newtonsoft.Json;
 
 public class PalmInputHandler : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class PalmInputHandler : MonoBehaviour
     [SerializeField] private float lineWidth = 0.005f;
     [SerializeField] private Material projectedLineMaterial;      // Green material
     [SerializeField] private Material rawLineMaterial;            // Red material
+
+    [Header("Gesture Save Settings")]
+    [SerializeField] private string gestureSavePath = "Assets/Gestures/";
 
     [Header("Debug")]
     [SerializeField] private bool showDebugPlane = true;
@@ -38,7 +42,6 @@ public class PalmInputHandler : MonoBehaviour
 
     void Awake()
     {
-
         projectedLineRenderer.useWorldSpace = false;
         projectedLineRenderer.startWidth = lineWidth;
         projectedLineRenderer.endWidth = lineWidth;
@@ -47,6 +50,12 @@ public class PalmInputHandler : MonoBehaviour
         rawLineRenderer.positionCount = 0;
         rawLineRenderer.startWidth = lineWidth;
         rawLineRenderer.endWidth = lineWidth;
+
+        // Ensure gesture save directory exists
+        if (!Directory.Exists(gestureSavePath))
+        {
+            Directory.CreateDirectory(gestureSavePath);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -123,7 +132,14 @@ public class PalmInputHandler : MonoBehaviour
 
             Debug.Log($"2D Samples range: X[{samples2D.Min(p => p.x):F3}, {samples2D.Max(p => p.x):F3}] Y[{samples2D.Min(p => p.y):F3}, {samples2D.Max(p => p.y):F3}]");
 
-            // Convert all the Vector2 Points into DollarQ Points. add them to the array.
+            // Convert all the Vector2 Points into PDollar Points
+            CurrentPointSet = new Point[samples2D.Count];
+            for (int i = 0; i < samples2D.Count; i++)
+            {
+                CurrentPointSet[i] = new Point(samples2D[i].x, samples2D[i].y, 0);
+            }
+
+            Debug.Log($"Converted {CurrentPointSet.Length} points for PDollar recognition");
         }
     }
 
@@ -295,20 +311,56 @@ public class PalmInputHandler : MonoBehaviour
         }
     }
 
-    public void OnIndexTapped() { 
+    public void OnIndexTapped()
+    {
         // Leave this code be for now
     }
 
-    public void OnMiddletapped() { 
+    public void OnMiddletapped()
+    {
         // Leave this code for now
     }
 
     public void SaveGesture(string letterName)
     {
-        // When this function is called, a gesture is created with all the accumulated points.
-        // All the points are cleared, and a new gesture reference is created. all the line renderers are deleted
-        // A new json file with format letter_number is created, that is the serialized gesture of that letter.
-        // If the file exists, like a_4.json, then the new file created is a_5.json
+        // Check if we have points to save
+        if (CurrentPointSet == null || CurrentPointSet.Length == 0)
+        {
+            Debug.LogWarning("No gesture points to save!");
+            return;
+        }
 
+        // Create gesture with the accumulated points
+        CurrentGesture = new Gesture(CurrentPointSet);
+
+        // Find the next available file number
+        int fileNumber = 1;
+        string fileName;
+        string fullPath;
+
+        do
+        {
+            fileName = $"{letterName.ToLower()}_{fileNumber}.json";
+            fullPath = Path.Combine(gestureSavePath, fileName);
+            fileNumber++;
+        } while (File.Exists(fullPath));
+
+        // Serialize and save the gesture
+        string jsonData = JsonConvert.SerializeObject(CurrentGesture);
+        File.WriteAllText(fullPath, jsonData);
+
+        Debug.Log($"Gesture saved to: {fullPath}");
+
+        // Clear all data and create new gesture reference
+        CurrentGesture = null;
+        CurrentPointSet = null;
+        samplesWorld3D.Clear();
+        rawSamplesWorld3D.Clear();
+
+        // Clear line renderers
+        projectedLineRenderer.positionCount = 0;
+        rawLineRenderer.positionCount = 0;
+
+        Debug.Log($"Gesture data cleared. Ready for new gesture.");
     }
 }

@@ -320,6 +320,7 @@ MonoBehaviour:
   lineWidth: 0.005
   projectedLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   rawLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  gestureSavePath: D:/HandTrackingTextEntry/Assets/StreamingAssets\Gestures
   showDebugPlane: 1
 --- !u!1 &889340627
 GameObject:
@@ -1075,7 +1076,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4626717929093065524, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5209837204188861694, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: m_MenuPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1124,6 +1125,18 @@ PrefabInstance:
     - target: {fileID: 6731970772223084639, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: m_Name
       value: Hands Rig Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 445935482}
+    - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 17279646124737068, guid: c9986303c43124446a864509ebbca037, type: 3}
