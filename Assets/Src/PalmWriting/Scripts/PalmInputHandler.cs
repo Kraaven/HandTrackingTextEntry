@@ -22,6 +22,7 @@ public class PalmInputHandler : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private bool showDebugPlane = true;
+    public bool RecogniseGesture;
 
     private bool recordInput;
     private FingerTipCollider activeFinger;
@@ -39,6 +40,8 @@ public class PalmInputHandler : MonoBehaviour
 
     private Gesture CurrentGesture;
     private Point[] CurrentPointSet;
+
+    private Gesture[] GestureSet;
 
     public static PalmInputHandler Instance { get; private set; }
 
@@ -60,6 +63,40 @@ public class PalmInputHandler : MonoBehaviour
         if (!Directory.Exists(gestureSavePath))
         {
             Directory.CreateDirectory(gestureSavePath);
+        }
+
+        if (RecogniseGesture)
+        {
+            var Gestures = new List<Gesture>();
+
+            if (!Directory.Exists(gestureSavePath))
+            {
+                Debug.LogWarning($"Gesture path not found: {gestureSavePath}");
+                return;
+            }
+
+            string[] files = Directory.GetFiles(gestureSavePath);
+
+            foreach (string file in files)
+            {
+                if (Path.GetExtension(file).ToLower() != ".json")
+                    continue;
+
+                try
+                {
+                    string json = File.ReadAllText(file);
+                    Gesture gesture = JsonConvert.DeserializeObject<Gesture>(json);
+
+                    if (gesture != null)
+                        Gestures.Add(gesture);
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogError($"Failed to load gesture file: {file}\n{e}");
+                }
+            }
+
+            GestureSet = Gestures.ToArray();
         }
     }
 
@@ -145,6 +182,12 @@ public class PalmInputHandler : MonoBehaviour
             }
 
             Debug.Log($"Converted {CurrentPointSet.Length} points for PDollar recognition");
+        }
+
+        if (RecogniseGesture) {
+            CurrentGesture = new Gesture(CurrentPointSet);
+            string letterName = QDollarGestureRecognizer.QPointCloudRecognizer.Classify(CurrentGesture, GestureSet);
+            print($"Recognised Gesture : {letterName}");
         }
     }
 
@@ -345,6 +388,7 @@ public class PalmInputHandler : MonoBehaviour
 
         // Create gesture with the accumulated points
         CurrentGesture = new Gesture(CurrentPointSet);
+        CurrentGesture.Name = letterName;
 
         // Find the next available file number
         int fileNumber = 1;
