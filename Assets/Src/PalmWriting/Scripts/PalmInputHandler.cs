@@ -18,7 +18,7 @@ public class PalmInputHandler : MonoBehaviour
     [SerializeField] private Material rawLineMaterial;            // Red material
 
     [Header("Gesture Save Settings")]
-    [SerializeField] private string gestureSavePath = "Assets/Gestures/";
+    private string gestureSavePath = Path.Combine(Application.streamingAssetsPath, "Gestures");
 
     [Header("Debug")]
     [SerializeField] private bool showDebugPlane = true;
@@ -40,9 +40,14 @@ public class PalmInputHandler : MonoBehaviour
     private Gesture CurrentGesture;
     private Point[] CurrentPointSet;
 
+    public static PalmInputHandler Instance { get; private set; }
+
     void Awake()
     {
-        projectedLineRenderer.useWorldSpace = false;
+        if (Instance == null) Instance = this;
+        else Destroy(this);
+
+            projectedLineRenderer.useWorldSpace = false;
         projectedLineRenderer.startWidth = lineWidth;
         projectedLineRenderer.endWidth = lineWidth;
 
@@ -326,6 +331,14 @@ public class PalmInputHandler : MonoBehaviour
         // Check if we have points to save
         if (CurrentPointSet == null || CurrentPointSet.Length == 0)
         {
+            CurrentGesture = null;
+            CurrentPointSet = null;
+            samplesWorld3D.Clear();
+            rawSamplesWorld3D.Clear();
+
+            projectedLineRenderer.positionCount = 0;
+            rawLineRenderer.positionCount = 0;
+
             Debug.LogWarning("No gesture points to save!");
             return;
         }
