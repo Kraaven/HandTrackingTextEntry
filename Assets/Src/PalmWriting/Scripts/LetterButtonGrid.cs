@@ -164,6 +164,6 @@ public class ButtonInteraction : MonoBehaviour
     private void ExecuteButtonAction()
     {
         Debug.Log($"Pressed Button {letter} successfully!");
-        // Add your visual feedback or sound effects here
+        PalmInputHandler.Instance.SaveGesture(this.letter);
     }
 }

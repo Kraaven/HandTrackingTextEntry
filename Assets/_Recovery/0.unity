@@ -181,10 +181,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6380618530125184012, guid: 5b37cd472cc1ed242b3c5a461c3fe14d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b37cd472cc1ed242b3c5a461c3fe14d, type: 3}
 --- !u!1 &445935482
 GameObject:
@@ -315,9 +312,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PalmInputHandler
   threshold: 0.0002
+  projectedLineRenderer: {fileID: 1502277506}
+  rawLineRenderer: {fileID: 1384157522}
   lineWidth: 0.005
-  projectedLineMaterial: {fileID: 2100000, guid: b00c09477adb0e54aa3fc55e395dfa6f, type: 2}
-  rawLineMaterial: {fileID: 2100000, guid: 24b2d167ba270454199ced5c15395c73, type: 2}
+  projectedLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  rawLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   gestureSavePath: D:/HandTrackingTextEntry/Assets/StreamingAssets\Gestures
   showDebugPlane: 1
 --- !u!1 &889340627
@@ -796,7 +795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1384157521
 Transform:
   m_ObjectHideFlags: 0
@@ -938,7 +937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1502277505
 Transform:
   m_ObjectHideFlags: 0

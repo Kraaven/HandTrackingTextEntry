@@ -18,12 +18,13 @@ public class PalmInputHandler : MonoBehaviour
     [SerializeField] private Material rawLineMaterial;            // Red material
 
     [Header("Gesture Save Settings")]
-    [SerializeField] private string gestureSavePath = "Assets/Gestures/";
+    private string gestureSavePath = Path.Combine(Application.streamingAssetsPath, "Gestures");
 
     [Header("Debug")]
     [SerializeField] private bool showDebugPlane = true;
 
     private bool recordInput;
+    private bool recordNewGesture;
     private FingerTipCollider activeFinger;
     private Plane drawingPlane;
 
@@ -39,10 +40,14 @@ public class PalmInputHandler : MonoBehaviour
 
     private Gesture CurrentGesture;
     private Point[] CurrentPointSet;
+    public static PalmInputHandler Instance;
 
     void Awake()
     {
-        projectedLineRenderer.useWorldSpace = false;
+        if (Instance == null) Instance = this;
+        else Destroy(this);
+
+            projectedLineRenderer.useWorldSpace = false;
         projectedLineRenderer.startWidth = lineWidth;
         projectedLineRenderer.endWidth = lineWidth;
 
@@ -56,6 +61,8 @@ public class PalmInputHandler : MonoBehaviour
         {
             Directory.CreateDirectory(gestureSavePath);
         }
+
+        recordNewGesture = true;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -68,19 +75,22 @@ public class PalmInputHandler : MonoBehaviour
         if (fingertip.FingerType != FingerType.Index)
             return;
 
+        if (recordNewGesture){        
         // Capture the plane orientation at the START of the gesture
         planeNormal = transform.forward;
         planePosition = transform.position;
         drawingPlane = new Plane(planeNormal, planePosition);
-
-        activeFinger = fingertip;
-        recordInput = true;
 
         // Clear previous data
         samplesWorld3D.Clear();
         rawSamplesWorld3D.Clear();
         projectedLineRenderer.positionCount = 0;
         rawLineRenderer.positionCount = 0;
+            recordNewGesture = false;
+        }
+
+        activeFinger = fingertip;
+        recordInput = true;
 
         // Get first points
         Vector3 rawWorldPos = activeFinger.transform.position;
@@ -326,6 +336,15 @@ public class PalmInputHandler : MonoBehaviour
         // Check if we have points to save
         if (CurrentPointSet == null || CurrentPointSet.Length == 0)
         {
+            CurrentGesture = null;
+            CurrentPointSet = null;
+            samplesWorld3D.Clear();
+            rawSamplesWorld3D.Clear();
+            recordNewGesture = true;
+
+            projectedLineRenderer.positionCount = 0;
+            rawLineRenderer.positionCount = 0;
+
             Debug.LogWarning("No gesture points to save!");
             return;
         }
@@ -356,6 +375,7 @@ public class PalmInputHandler : MonoBehaviour
         CurrentPointSet = null;
         samplesWorld3D.Clear();
         rawSamplesWorld3D.Clear();
+        recordNewGesture = true;
 
         // Clear line renderers
         projectedLineRenderer.positionCount = 0;
