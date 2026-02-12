@@ -169,10 +169,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4839454971311056093, guid: 5b37cd472cc1ed242b3c5a461c3fe14d, type: 3}
       propertyPath: SessionInstructions
-      value: '<b>Standard Floating Keyboard</b><br> Once you start the session, use
-        the keyboard floating in front of you to type the text phrase in front of
-        you. <br> <b>Note</b>: You must end your sentence with a space to move to
-        the next phrase'
+      value: <b>Palm Writing</b><br>Once you start the session, begin to write a
+        letter on your left palm to insert it as text.<br>Each letter must be constructed
+        in a single stroke.<br><br>Thumb Tap your <i>Index Finger</i> to delete a
+        character.<br>Thumb Tap your <i>Middle Finger</i> to insert a space.<br>Study
+        the Data-set on the left before you start.
       objectReference: {fileID: 0}
     - target: {fileID: 6380618530125184012, guid: 5b37cd472cc1ed242b3c5a461c3fe14d, type: 3}
       propertyPath: m_Name
@@ -200,7 +201,7 @@ GameObject:
   - component: {fileID: 445935484}
   - component: {fileID: 445935487}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: DrawingSurface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,8 +216,8 @@ Transform:
   m_GameObject: {fileID: 445935482}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7200063, y: 0, z: 0, w: 0.6939676}
-  m_LocalPosition: {x: -0.0024, y: -0.0287, z: 0.0608}
-  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
+  m_LocalPosition: {x: -0.00172, y: -0.0287, z: 0.06364}
+  m_LocalScale: {x: 0.080003954, y: 0.075681195, z: 0.07}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1502277505}
@@ -320,8 +321,110 @@ MonoBehaviour:
   lineWidth: 0.005
   projectedLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   rawLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  showDebugPlane: 1
+  showDebugPlane: 0
   RecogniseGesture: 1
+--- !u!1 &672529436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 672529440}
+  - component: {fileID: 672529439}
+  - component: {fileID: 672529438}
+  - component: {fileID: 672529437}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &672529437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672529436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &672529438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672529436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &672529439
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672529436}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &672529440
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672529436}
+  m_LocalRotation: {x: -0, y: -0.2588186, z: -0, w: 0.965926}
+  m_LocalPosition: {x: 0, y: 0, z: 1.038}
+  m_LocalScale: {x: 0.0008, y: 0.0008, z: 0.0008}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1322612945}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.545, y: 1.601}
+  m_SizeDelta: {x: 647, y: 2048}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &889340627
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +885,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1322612944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1322612945}
+  - component: {fileID: 1322612947}
+  - component: {fileID: 1322612946}
+  m_Layer: 5
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1322612945
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322612944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 672529440}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1322612946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322612944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: d8177b7e154a6e748a4e3d7006e06a3e, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1322612947
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322612944}
+  m_CullTransparentMesh: 1
 --- !u!1 &1384157520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,8 +1203,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.14462018, g: 1, b: 0, a: 1}
-      key1: {r: 0.14509805, g: 1, b: 0, a: 1}
+      key0: {r: 0.14509821, g: 1, b: 0, a: 0}
+      key1: {r: 0.14509805, g: 1, b: 0, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1074,6 +1249,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1257225213459055573, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: m_Radius
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 4626717929093065524, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1126,17 +1305,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hands Rig Base
       objectReference: {fileID: 0}
+    - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 445935487}
+    - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMiddletapped
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PalmInputHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 445935482}
+      objectReference: {fileID: 445935487}
     - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnIndexTapped
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PalmInputHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489068784613063488, guid: c9986303c43124446a864509ebbca037, type: 3}
+      propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 17279646124737068, guid: c9986303c43124446a864509ebbca037, type: 3}
@@ -1168,7 +1391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1889270885
 Transform:
   m_ObjectHideFlags: 0
@@ -1260,3 +1483,4 @@ SceneRoots:
   - {fileID: 303604704}
   - {fileID: 979576605}
   - {fileID: 1889270885}
+  - {fileID: 672529440}

@@ -188,6 +188,7 @@ public class PalmInputHandler : MonoBehaviour
             CurrentGesture = new Gesture(CurrentPointSet);
             string letterName = QDollarGestureRecognizer.QPointCloudRecognizer.Classify(CurrentGesture, GestureSet);
             print($"Recognised Gesture : {letterName}");
+            GameManager.Instance.InsertCharacter(letterName.ToLower()[0]);
         }
     }
 
@@ -359,15 +360,41 @@ public class PalmInputHandler : MonoBehaviour
         }
     }
 
+    private float indexTapCooldown = 0.5f;
+    private float middleTapCooldown = 0.5f;
+
+    private float lastIndexTapTime = -Mathf.Infinity;
+    private float lastMiddleTapTime = -Mathf.Infinity;
+
     public void OnIndexTapped()
     {
-        // Leave this code be for now
+        float timeSinceLastTap = Time.time - lastIndexTapTime;
+
+        if (timeSinceLastTap < indexTapCooldown)
+        {
+            Debug.Log($"Index tap on cooldown. Wait {indexTapCooldown - timeSinceLastTap:F2}s");
+            return;
+        }
+
+        lastIndexTapTime = Time.time;
+        GameManager.Instance.DeleteCharacter();
     }
+
 
     public void OnMiddletapped()
     {
-        // Leave this code for now
+        float timeSinceLastTap = Time.time - lastMiddleTapTime;
+
+        if (timeSinceLastTap < middleTapCooldown)
+        {
+            Debug.Log($"Middle tap on cooldown. Wait {middleTapCooldown - timeSinceLastTap:F2}s");
+            return;
+        }
+
+        lastMiddleTapTime = Time.time;
+        GameManager.Instance.InsertCharacter(' ');
     }
+
 
     public void SaveGesture(string letterName)
     {

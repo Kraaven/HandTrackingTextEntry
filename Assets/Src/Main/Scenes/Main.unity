@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 063e25bbdd63f484eb21744799a8d16d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  SceneToMoveTo: PalmWriting
+  SceneToMoveTo: PalmWritingScene
   EntryType: 1
 --- !u!65 &373900092
 BoxCollider:
@@ -1345,11 +1345,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4839454971311056093, guid: 5b37cd472cc1ed242b3c5a461c3fe14d, type: 3}
       propertyPath: SessionInstructions
-      value: '<b>Welcome to Hand Tracking Text Entry</b><br>This study compares experimental
-        hand-tracking methods against the standard XR floating keyboard.<br>Instructions:<br><b>Goal</b>:
-        Type the provided phrases as accurately as possible.<br><b>Feedback</b>:
-        Correct letters will appear green, while mistakes will appear red.<br>Good
-        luck!'
+      value: <b>Welcome to Hand Tracking Text Entry</b><br>This project compares
+        palm-writing with a standard XR floating keyboard.<br><br><b>Goal:</b>Type
+        each phrase accurately and add a space at the end to continue.<br><b>Feedback:</b>
+        Correct letters appear green; mistakes appear red.<br><br>Good luck!
       objectReference: {fileID: 0}
     - target: {fileID: 6380618530125184012, guid: 5b37cd472cc1ed242b3c5a461c3fe14d, type: 3}
       propertyPath: m_Name

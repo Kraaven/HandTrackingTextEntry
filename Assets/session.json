@@ -1,1293 +1,3694 @@
 {
-  "participantId": "5f4d3c45-f200-48d8-a2fd-8291493bd292",
-  "entryType": "Standard",
-  "sessionStartTime": 38.599987,
-  "sessionEndTime": 192.399933,
+  "participantId": "c52c1008-fcfa-4059-979a-109426c7c301",
+  "entryType": "PalmWriting",
+  "sessionStartTime": 7.439997,
+  "sessionEndTime": 579.2198,
   "trials": [
     {
       "phraseIndex": 0,
-      "targetPhrase": "correct your diction immediately\r",
-      "finalText": "correct your diction immedia\u0000tekl",
-      "startTime": 38.599987,
-      "endTime": 86.31997,
+      "targetPhrase": "my mother makes good cookies\r",
+      "finalText": "my mother makes good cookieuy",
+      "startTime": 7.439997,
+      "endTime": 197.839935,
       "events": [
         {
-          "time": 42.6599846,
+          "time": 10.6399965,
           "eventType": 0,
-          "character": "c",
+          "character": "m",
           "cursorBefore": 0,
           "cursorAfter": 1
         },
         {
-          "time": 43.4399834,
+          "time": 12.8599958,
           "eventType": 0,
-          "character": "o",
+          "character": "u",
           "cursorBefore": 1,
           "cursorAfter": 2
         },
         {
-          "time": 44.3399849,
+          "time": 13.3399954,
           "eventType": 0,
           "character": "r",
           "cursorBefore": 2,
           "cursorAfter": 3
         },
         {
-          "time": 44.7599831,
-          "eventType": 0,
-          "character": "r",
+          "time": 14.0399952,
+          "eventType": 1,
+          "character": "\u0000",
           "cursorBefore": 3,
-          "cursorAfter": 4
+          "cursorAfter": 2
         },
         {
-          "time": 45.2799835,
+          "time": 14.9399948,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 2,
+          "cursorAfter": 1
+        },
+        {
+          "time": 16.3999939,
           "eventType": 0,
-          "character": "e",
-          "cursorBefore": 4,
-          "cursorAfter": 5
+          "character": "g",
+          "cursorBefore": 1,
+          "cursorAfter": 2
         },
         {
-          "time": 46.03998,
+          "time": 17.0399933,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 2,
+          "cursorAfter": 1
+        },
+        {
+          "time": 18.4799938,
           "eventType": 0,
-          "character": "c",
-          "cursorBefore": 5,
-          "cursorAfter": 6
+          "character": "l",
+          "cursorBefore": 1,
+          "cursorAfter": 2
         },
         {
-          "time": 46.53998,
+          "time": 18.9999924,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 2,
+          "cursorAfter": 1
+        },
+        {
+          "time": 20.4999924,
           "eventType": 0,
-          "character": "t",
-          "cursorBefore": 6,
-          "cursorAfter": 7
+          "character": "q",
+          "cursorBefore": 1,
+          "cursorAfter": 2
         },
         {
-          "time": 47.2399826,
+          "time": 21.1199932,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 2,
+          "cursorAfter": 1
+        },
+        {
+          "time": 22.8199921,
           "eventType": 0,
-          "character": " ",
-          "cursorBefore": 7,
-          "cursorAfter": 8
+          "character": "g",
+          "cursorBefore": 1,
+          "cursorAfter": 2
         },
         {
-          "time": 47.8199844,
+          "time": 23.4799919,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 2,
+          "cursorAfter": 1
+        },
+        {
+          "time": 25.2999916,
+          "eventType": 0,
+          "character": "g",
+          "cursorBefore": 1,
+          "cursorAfter": 2
+        },
+        {
+          "time": 26.15999,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 2,
+          "cursorAfter": 1
+        },
+        {
+          "time": 28.61999,
           "eventType": 0,
           "character": "y",
-          "cursorBefore": 8,
-          "cursorAfter": 9
-        },
-        {
-          "time": 48.4399834,
-          "eventType": 0,
-          "character": "o",
-          "cursorBefore": 9,
-          "cursorAfter": 10
-        },
-        {
-          "time": 49.01998,
-          "eventType": 0,
-          "character": "u",
-          "cursorBefore": 10,
-          "cursorAfter": 11
-        },
-        {
-          "time": 49.5999832,
-          "eventType": 0,
-          "character": "r",
-          "cursorBefore": 11,
-          "cursorAfter": 12
-        },
-        {
-          "time": 50.299984,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 12,
-          "cursorAfter": 13
-        },
-        {
-          "time": 50.85998,
-          "eventType": 0,
-          "character": "d",
-          "cursorBefore": 13,
-          "cursorAfter": 14
-        },
-        {
-          "time": 51.53998,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 14,
-          "cursorAfter": 15
-        },
-        {
-          "time": 52.5999832,
-          "eventType": 0,
-          "character": "c",
-          "cursorBefore": 15,
-          "cursorAfter": 16
-        },
-        {
-          "time": 52.67998,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 16,
-          "cursorAfter": 17
-        },
-        {
-          "time": 54.0599823,
-          "eventType": 0,
-          "character": "t",
-          "cursorBefore": 17,
-          "cursorAfter": 18
-        },
-        {
-          "time": 54.83998,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 18,
-          "cursorAfter": 19
-        },
-        {
-          "time": 56.61998,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 19,
-          "cursorAfter": 18
-        },
-        {
-          "time": 57.23998,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 18,
-          "cursorAfter": 17
-        },
-        {
-          "time": 57.75998,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 17,
-          "cursorAfter": 16
-        },
-        {
-          "time": 59.81998,
-          "eventType": 0,
-          "character": "t",
-          "cursorBefore": 16,
-          "cursorAfter": 17
-        },
-        {
-          "time": 60.61998,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 17,
-          "cursorAfter": 18
-        },
-        {
-          "time": 60.71998,
-          "eventType": 0,
-          "character": "\u0000",
-          "cursorBefore": 18,
-          "cursorAfter": 19
-        },
-        {
-          "time": 61.659977,
-          "eventType": 0,
-          "character": "t",
-          "cursorBefore": 19,
-          "cursorAfter": 20
-        },
-        {
-          "time": 62.39998,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 20,
-          "cursorAfter": 21
-        },
-        {
-          "time": 62.9799767,
-          "eventType": 0,
-          "character": "o",
-          "cursorBefore": 21,
-          "cursorAfter": 22
-        },
-        {
-          "time": 63.55998,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 22,
-          "cursorAfter": 21
-        },
-        {
-          "time": 64.15998,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 21,
-          "cursorAfter": 20
-        },
-        {
-          "time": 66.03998,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 20,
-          "cursorAfter": 19
-        },
-        {
-          "time": 67.13998,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 19,
-          "cursorAfter": 18
-        },
-        {
-          "time": 67.31998,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 18,
-          "cursorAfter": 17
-        },
-        {
-          "time": 67.51997,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 17,
-          "cursorAfter": 16
-        },
-        {
-          "time": 69.4199753,
-          "eventType": 0,
-          "character": "t",
-          "cursorBefore": 16,
-          "cursorAfter": 17
-        },
-        {
-          "time": 70.7799759,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 17,
-          "cursorAfter": 18
-        },
-        {
-          "time": 72.239975,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 18,
-          "cursorAfter": 17
-        },
-        {
-          "time": 74.07997,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 17,
-          "cursorAfter": 18
-        },
-        {
-          "time": 74.67997,
-          "eventType": 0,
-          "character": "o",
-          "cursorBefore": 18,
-          "cursorAfter": 19
-        },
-        {
-          "time": 75.43997,
-          "eventType": 0,
-          "character": "n",
-          "cursorBefore": 19,
-          "cursorAfter": 20
-        },
-        {
-          "time": 76.07997,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 20,
-          "cursorAfter": 21
-        },
-        {
-          "time": 77.13997,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 21,
-          "cursorAfter": 22
-        },
-        {
-          "time": 77.85997,
-          "eventType": 0,
-          "character": "m",
-          "cursorBefore": 22,
-          "cursorAfter": 23
-        },
-        {
-          "time": 80.43997,
-          "eventType": 0,
-          "character": "m",
-          "cursorBefore": 23,
-          "cursorAfter": 24
-        },
-        {
-          "time": 81.77997,
-          "eventType": 0,
-          "character": "e",
-          "cursorBefore": 24,
-          "cursorAfter": 25
-        },
-        {
-          "time": 82.3799744,
-          "eventType": 0,
-          "character": "d",
-          "cursorBefore": 25,
-          "cursorAfter": 26
-        },
-        {
-          "time": 83.09997,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 26,
-          "cursorAfter": 27
-        },
-        {
-          "time": 84.39997,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 27,
-          "cursorAfter": 28
-        },
-        {
-          "time": 84.45997,
-          "eventType": 0,
-          "character": "\u0000",
-          "cursorBefore": 28,
-          "cursorAfter": 29
-        },
-        {
-          "time": 84.97997,
-          "eventType": 0,
-          "character": "t",
-          "cursorBefore": 29,
-          "cursorAfter": 30
-        },
-        {
-          "time": 85.47997,
-          "eventType": 0,
-          "character": "e",
-          "cursorBefore": 30,
-          "cursorAfter": 31
-        },
-        {
-          "time": 86.29997,
-          "eventType": 0,
-          "character": "k",
-          "cursorBefore": 31,
-          "cursorAfter": 32
-        },
-        {
-          "time": 86.31997,
-          "eventType": 0,
-          "character": "l",
-          "cursorBefore": 32,
-          "cursorAfter": 33
-        }
-      ]
-    },
-    {
-      "phraseIndex": 1,
-      "targetPhrase": "our life expectancy has increased\r",
-      "finalText": "our life expectancy has increased ",
-      "startTime": 86.31997,
-      "endTime": 143.439957,
-      "events": [
-        {
-          "time": 94.2999649,
-          "eventType": 0,
-          "character": "o",
-          "cursorBefore": 0,
-          "cursorAfter": 1
-        },
-        {
-          "time": 95.09997,
-          "eventType": 0,
-          "character": "u",
           "cursorBefore": 1,
           "cursorAfter": 2
         },
         {
-          "time": 96.37997,
+          "time": 30.35999,
           "eventType": 0,
-          "character": "r",
+          "character": " ",
           "cursorBefore": 2,
           "cursorAfter": 3
         },
         {
-          "time": 97.4399643,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 3,
-          "cursorAfter": 4
-        },
-        {
-          "time": 98.4399643,
-          "eventType": 0,
-          "character": "l",
-          "cursorBefore": 4,
-          "cursorAfter": 5
-        },
-        {
-          "time": 99.05997,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 5,
-          "cursorAfter": 6
-        },
-        {
-          "time": 99.8399658,
-          "eventType": 0,
-          "character": "f",
-          "cursorBefore": 6,
-          "cursorAfter": 7
-        },
-        {
-          "time": 100.379967,
-          "eventType": 0,
-          "character": "e",
-          "cursorBefore": 7,
-          "cursorAfter": 8
-        },
-        {
-          "time": 101.179962,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 8,
-          "cursorAfter": 9
-        },
-        {
-          "time": 101.999962,
-          "eventType": 0,
-          "character": "e",
-          "cursorBefore": 9,
-          "cursorAfter": 10
-        },
-        {
-          "time": 104.039963,
-          "eventType": 0,
-          "character": "x",
-          "cursorBefore": 10,
-          "cursorAfter": 11
-        },
-        {
-          "time": 107.019958,
+          "time": 36.4399872,
           "eventType": 0,
           "character": "p",
+          "cursorBefore": 3,
+          "cursorAfter": 4
+        },
+        {
+          "time": 39.719986,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 4,
+          "cursorAfter": 3
+        },
+        {
+          "time": 41.6399841,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 3,
+          "cursorAfter": 4
+        },
+        {
+          "time": 43.2799835,
+          "eventType": 0,
+          "character": "p",
+          "cursorBefore": 4,
+          "cursorAfter": 5
+        },
+        {
+          "time": 44.0999832,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 5,
+          "cursorAfter": 4
+        },
+        {
+          "time": 45.3999825,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 4,
+          "cursorAfter": 5
+        },
+        {
+          "time": 46.9199829,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 5,
+          "cursorAfter": 6
+        },
+        {
+          "time": 48.8199844,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 49.4199829,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 7,
+          "cursorAfter": 6
+        },
+        {
+          "time": 50.83998,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 51.4399834,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 7,
+          "cursorAfter": 6
+        },
+        {
+          "time": 53.11998,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 53.65998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 7,
+          "cursorAfter": 6
+        },
+        {
+          "time": 54.57998,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 55.07998,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 7,
+          "cursorAfter": 8
+        },
+        {
+          "time": 55.41998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 8,
+          "cursorAfter": 7
+        },
+        {
+          "time": 56.23998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 7,
+          "cursorAfter": 6
+        },
+        {
+          "time": 56.79998,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 57.39998,
+          "eventType": 0,
+          "character": "p",
+          "cursorBefore": 7,
+          "cursorAfter": 8
+        },
+        {
+          "time": 57.63998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 8,
+          "cursorAfter": 7
+        },
+        {
+          "time": 58.47998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 7,
+          "cursorAfter": 6
+        },
+        {
+          "time": 59.91998,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 60.55998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 7,
+          "cursorAfter": 6
+        },
+        {
+          "time": 62.21998,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 62.75998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 7,
+          "cursorAfter": 6
+        },
+        {
+          "time": 63.8399773,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 64.29998,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 7,
+          "cursorAfter": 8
+        },
+        {
+          "time": 64.47998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 8,
+          "cursorAfter": 7
+        },
+        {
+          "time": 64.97998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 7,
+          "cursorAfter": 6
+        },
+        {
+          "time": 66.35998,
+          "eventType": 0,
+          "character": "h",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 68.4199753,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 7,
+          "cursorAfter": 8
+        },
+        {
+          "time": 70.53998,
+          "eventType": 0,
+          "character": "p",
+          "cursorBefore": 8,
+          "cursorAfter": 9
+        },
+        {
+          "time": 71.49998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 9,
+          "cursorAfter": 8
+        },
+        {
+          "time": 74.63998,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 8,
+          "cursorAfter": 9
+        },
+        {
+          "time": 75.33997,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 9,
+          "cursorAfter": 8
+        },
+        {
+          "time": 76.85997,
+          "eventType": 0,
+          "character": "q",
+          "cursorBefore": 8,
+          "cursorAfter": 9
+        },
+        {
+          "time": 77.21997,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 9,
+          "cursorAfter": 8
+        },
+        {
+          "time": 78.1999741,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 8,
+          "cursorAfter": 9
+        },
+        {
+          "time": 78.51997,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 9,
+          "cursorAfter": 10
+        },
+        {
+          "time": 78.6999741,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 78.8799744,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 11,
+          "cursorAfter": 10
+        },
+        {
+          "time": 81.25997,
+          "eventType": 0,
+          "character": "z",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 82.03997,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 11,
+          "cursorAfter": 10
+        },
+        {
+          "time": 82.93997,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 10,
+          "cursorAfter": 9
+        },
+        {
+          "time": 83.51997,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 9,
+          "cursorAfter": 8
+        },
+        {
+          "time": 85.21997,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 8,
+          "cursorAfter": 9
+        },
+        {
+          "time": 86.03997,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 9,
+          "cursorAfter": 8
+        },
+        {
+          "time": 88.03997,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 8,
+          "cursorAfter": 9
+        },
+        {
+          "time": 89.39997,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 9,
+          "cursorAfter": 10
+        },
+        {
+          "time": 91.63997,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 92.9399643,
+          "eventType": 0,
+          "character": "i",
           "cursorBefore": 11,
           "cursorAfter": 12
         },
         {
-          "time": 107.719963,
+          "time": 93.41997,
           "eventType": 0,
-          "character": "e",
+          "character": "l",
           "cursorBefore": 12,
           "cursorAfter": 13
         },
         {
-          "time": 108.439964,
+          "time": 94.259964,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
+        },
+        {
+          "time": 95.05997,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 12,
+          "cursorAfter": 11
+        },
+        {
+          "time": 96.4799652,
           "eventType": 0,
-          "character": "c",
+          "character": "a",
+          "cursorBefore": 11,
+          "cursorAfter": 12
+        },
+        {
+          "time": 98.71996,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 101.959961,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
+        },
+        {
+          "time": 104.219963,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 105.079964,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
+        },
+        {
+          "time": 107.119965,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 107.799965,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
+        },
+        {
+          "time": 109.999962,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 110.899963,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
+        },
+        {
+          "time": 112.73996,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 113.479958,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
+        },
+        {
+          "time": 114.23996,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 115.459961,
+          "eventType": 0,
+          "character": "b",
           "cursorBefore": 13,
           "cursorAfter": 14
         },
         {
-          "time": 109.899963,
-          "eventType": 0,
-          "character": "t",
+          "time": 116.219955,
+          "eventType": 1,
+          "character": "\u0000",
           "cursorBefore": 14,
-          "cursorAfter": 15
+          "cursorAfter": 13
         },
         {
-          "time": 109.959961,
-          "eventType": 0,
-          "character": "f",
-          "cursorBefore": 15,
-          "cursorAfter": 16
-        },
-        {
-          "time": 110.319962,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 16,
-          "cursorAfter": 17
-        },
-        {
-          "time": 110.519958,
-          "eventType": 0,
-          "character": "\u0000",
-          "cursorBefore": 17,
-          "cursorAfter": 18
-        },
-        {
-          "time": 111.279961,
-          "eventType": 0,
-          "character": "n",
-          "cursorBefore": 18,
-          "cursorAfter": 19
-        },
-        {
-          "time": 111.73996,
-          "eventType": 0,
-          "character": "c",
-          "cursorBefore": 19,
-          "cursorAfter": 20
-        },
-        {
-          "time": 112.619957,
+          "time": 117.139961,
           "eventType": 1,
           "character": "\u0000",
-          "cursorBefore": 20,
-          "cursorAfter": 19
+          "cursorBefore": 13,
+          "cursorAfter": 12
         },
         {
-          "time": 112.639961,
+          "time": 120.09996,
           "eventType": 0,
-          "character": "\u0000",
-          "cursorBefore": 19,
-          "cursorAfter": 20
+          "character": "b",
+          "cursorBefore": 12,
+          "cursorAfter": 13
         },
         {
-          "time": 112.939957,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 20,
-          "cursorAfter": 19
-        },
-        {
-          "time": 113.379959,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 19,
-          "cursorAfter": 18
-        },
-        {
-          "time": 113.879959,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 18,
-          "cursorAfter": 17
-        },
-        {
-          "time": 114.359962,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 17,
-          "cursorAfter": 16
-        },
-        {
-          "time": 114.899956,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 16,
-          "cursorAfter": 15
-        },
-        {
-          "time": 119.059959,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 15,
-          "cursorAfter": 16
-        },
-        {
-          "time": 120.039955,
-          "eventType": 0,
-          "character": "n",
-          "cursorBefore": 16,
-          "cursorAfter": 17
-        },
-        {
-          "time": 120.699959,
-          "eventType": 0,
-          "character": "c",
-          "cursorBefore": 17,
-          "cursorAfter": 18
-        },
-        {
-          "time": 121.23996,
-          "eventType": 0,
-          "character": "y",
-          "cursorBefore": 18,
-          "cursorAfter": 19
-        },
-        {
-          "time": 122.259956,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 19,
-          "cursorAfter": 20
-        },
-        {
-          "time": 123.159958,
+          "time": 125.419952,
           "eventType": 0,
           "character": "h",
-          "cursorBefore": 20,
-          "cursorAfter": 21
+          "cursorBefore": 13,
+          "cursorAfter": 14
         },
         {
-          "time": 123.459953,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 21,
-          "cursorAfter": 22
-        },
-        {
-          "time": 123.859955,
-          "eventType": 0,
-          "character": "s",
-          "cursorBefore": 22,
-          "cursorAfter": 23
-        },
-        {
-          "time": 125.019958,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 23,
-          "cursorAfter": 24
-        },
-        {
-          "time": 125.659958,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 24,
-          "cursorAfter": 25
-        },
-        {
-          "time": 126.799957,
-          "eventType": 0,
-          "character": "c",
-          "cursorBefore": 25,
-          "cursorAfter": 26
-        },
-        {
-          "time": 126.839958,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 26,
-          "cursorAfter": 27
-        },
-        {
-          "time": 126.959953,
-          "eventType": 0,
-          "character": "x",
-          "cursorBefore": 27,
-          "cursorAfter": 28
-        },
-        {
-          "time": 128.179962,
+          "time": 126.179955,
           "eventType": 1,
           "character": "\u0000",
-          "cursorBefore": 28,
-          "cursorAfter": 27
+          "cursorBefore": 14,
+          "cursorAfter": 13
         },
         {
-          "time": 128.459961,
+          "time": 126.739952,
           "eventType": 1,
           "character": "\u0000",
-          "cursorBefore": 27,
-          "cursorAfter": 26
+          "cursorBefore": 13,
+          "cursorAfter": 12
         },
         {
-          "time": 129.059952,
+          "time": 128.939957,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 129.039948,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 13,
+          "cursorAfter": 14
+        },
+        {
+          "time": 129.619949,
           "eventType": 1,
           "character": "\u0000",
-          "cursorBefore": 26,
-          "cursorAfter": 25
+          "cursorBefore": 14,
+          "cursorAfter": 13
         },
         {
-          "time": 131.459961,
-          "eventType": 0,
-          "character": "c",
-          "cursorBefore": 25,
-          "cursorAfter": 26
-        },
-        {
-          "time": 133.539948,
+          "time": 130.219955,
           "eventType": 1,
           "character": "\u0000",
-          "cursorBefore": 26,
-          "cursorAfter": 25
+          "cursorBefore": 13,
+          "cursorAfter": 12
         },
         {
-          "time": 134.559952,
+          "time": 132.779953,
           "eventType": 0,
-          "character": "n",
-          "cursorBefore": 25,
-          "cursorAfter": 26
+          "character": "b",
+          "cursorBefore": 12,
+          "cursorAfter": 13
         },
         {
-          "time": 135.619949,
-          "eventType": 0,
-          "character": "c",
-          "cursorBefore": 26,
-          "cursorAfter": 27
+          "time": 133.47995,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
         },
         {
-          "time": 136.379959,
+          "time": 136.559952,
           "eventType": 0,
-          "character": "r",
-          "cursorBefore": 27,
-          "cursorAfter": 28
+          "character": "k",
+          "cursorBefore": 12,
+          "cursorAfter": 13
         },
         {
-          "time": 137.159958,
+          "time": 139.279953,
           "eventType": 0,
-          "character": "e",
-          "cursorBefore": 28,
-          "cursorAfter": 29
+          "character": "o",
+          "cursorBefore": 13,
+          "cursorAfter": 14
         },
         {
-          "time": 137.699951,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 29,
-          "cursorAfter": 30
-        },
-        {
-          "time": 139.719955,
-          "eventType": 0,
-          "character": "s",
-          "cursorBefore": 30,
-          "cursorAfter": 31
-        },
-        {
-          "time": 140.819946,
-          "eventType": 0,
-          "character": "e",
-          "cursorBefore": 31,
-          "cursorAfter": 32
+          "time": 139.97995,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 14,
+          "cursorAfter": 13
         },
         {
           "time": 141.559952,
           "eventType": 0,
-          "character": "d",
-          "cursorBefore": 32,
-          "cursorAfter": 33
+          "character": "e",
+          "cursorBefore": 13,
+          "cursorAfter": 14
         },
         {
-          "time": 143.439957,
+          "time": 143.639954,
           "eventType": 0,
-          "character": " ",
-          "cursorBefore": 33,
-          "cursorAfter": 34
-        }
-      ]
-    },
-    {
-      "phraseIndex": 2,
-      "targetPhrase": "the biggest hamburger I have ever seen\r",
-      "finalText": "the biggest hamburger\u0000\u0000 iiiiiiiiihgvc u",
-      "startTime": 143.439957,
-      "endTime": 192.399933,
-      "events": [
+          "character": "g",
+          "cursorBefore": 14,
+          "cursorAfter": 15
+        },
+        {
+          "time": 144.619949,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 15,
+          "cursorAfter": 14
+        },
+        {
+          "time": 145.039948,
+          "eventType": 0,
+          "character": "x",
+          "cursorBefore": 14,
+          "cursorAfter": 15
+        },
         {
           "time": 145.719955,
           "eventType": 0,
-          "character": "t",
-          "cursorBefore": 0,
-          "cursorAfter": 1
+          "character": "s",
+          "cursorBefore": 15,
+          "cursorAfter": 16
         },
         {
-          "time": 145.759949,
-          "eventType": 0,
-          "character": "f",
-          "cursorBefore": 1,
-          "cursorAfter": 2
-        },
-        {
-          "time": 146.279953,
-          "eventType": 0,
-          "character": "h",
-          "cursorBefore": 2,
-          "cursorAfter": 3
-        },
-        {
-          "time": 146.899948,
+          "time": 146.199951,
           "eventType": 1,
           "character": "\u0000",
-          "cursorBefore": 3,
-          "cursorAfter": 2
+          "cursorBefore": 16,
+          "cursorAfter": 15
         },
         {
-          "time": 147.099945,
+          "time": 147.219955,
           "eventType": 1,
           "character": "\u0000",
-          "cursorBefore": 2,
-          "cursorAfter": 1
+          "cursorBefore": 15,
+          "cursorAfter": 14
         },
         {
-          "time": 147.839951,
+          "time": 148.679947,
+          "eventType": 0,
+          "character": "g",
+          "cursorBefore": 14,
+          "cursorAfter": 15
+        },
+        {
+          "time": 149.339951,
           "eventType": 1,
           "character": "\u0000",
-          "cursorBefore": 1,
-          "cursorAfter": 0
+          "cursorBefore": 15,
+          "cursorAfter": 14
         },
         {
-          "time": 148.579941,
+          "time": 150.71994,
           "eventType": 0,
-          "character": "t",
-          "cursorBefore": 0,
-          "cursorAfter": 1
+          "character": "s",
+          "cursorBefore": 14,
+          "cursorAfter": 15
         },
         {
-          "time": 149.099945,
-          "eventType": 0,
-          "character": "h",
-          "cursorBefore": 1,
-          "cursorAfter": 2
-        },
-        {
-          "time": 149.399948,
-          "eventType": 0,
-          "character": "e",
-          "cursorBefore": 2,
-          "cursorAfter": 3
-        },
-        {
-          "time": 150.099945,
+          "time": 152.079941,
           "eventType": 0,
           "character": " ",
-          "cursorBefore": 3,
-          "cursorAfter": 4
-        },
-        {
-          "time": 150.559952,
-          "eventType": 0,
-          "character": "b",
-          "cursorBefore": 4,
-          "cursorAfter": 5
-        },
-        {
-          "time": 150.97995,
-          "eventType": 0,
-          "character": "u",
-          "cursorBefore": 5,
-          "cursorAfter": 6
-        },
-        {
-          "time": 150.999939,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 6,
-          "cursorAfter": 7
-        },
-        {
-          "time": 151.899948,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 7,
-          "cursorAfter": 6
-        },
-        {
-          "time": 152.299942,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 6,
-          "cursorAfter": 5
-        },
-        {
-          "time": 152.999939,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 5,
-          "cursorAfter": 6
+          "cursorBefore": 15,
+          "cursorAfter": 16
         },
         {
           "time": 154.019943,
           "eventType": 0,
           "character": "g",
-          "cursorBefore": 6,
-          "cursorAfter": 7
-        },
-        {
-          "time": 154.259949,
-          "eventType": 0,
-          "character": "g",
-          "cursorBefore": 7,
-          "cursorAfter": 8
-        },
-        {
-          "time": 154.959946,
-          "eventType": 0,
-          "character": "e",
-          "cursorBefore": 8,
-          "cursorAfter": 9
-        },
-        {
-          "time": 155.659943,
-          "eventType": 0,
-          "character": "t",
-          "cursorBefore": 9,
-          "cursorAfter": 10
-        },
-        {
-          "time": 155.699951,
-          "eventType": 0,
-          "character": "f",
-          "cursorBefore": 10,
-          "cursorAfter": 11
-        },
-        {
-          "time": 155.71994,
-          "eventType": 0,
-          "character": "g",
-          "cursorBefore": 11,
-          "cursorAfter": 12
-        },
-        {
-          "time": 156.539948,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 12,
-          "cursorAfter": 11
-        },
-        {
-          "time": 157.039948,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 11,
-          "cursorAfter": 10
-        },
-        {
-          "time": 158.679947,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 10,
-          "cursorAfter": 9
-        },
-        {
-          "time": 159.279938,
-          "eventType": 0,
-          "character": "s",
-          "cursorBefore": 9,
-          "cursorAfter": 10
-        },
-        {
-          "time": 159.899948,
-          "eventType": 0,
-          "character": "t",
-          "cursorBefore": 10,
-          "cursorAfter": 11
-        },
-        {
-          "time": 160.879944,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 11,
-          "cursorAfter": 12
-        },
-        {
-          "time": 161.579941,
-          "eventType": 0,
-          "character": "h",
-          "cursorBefore": 12,
-          "cursorAfter": 13
-        },
-        {
-          "time": 162.21994,
-          "eventType": 0,
-          "character": "a",
-          "cursorBefore": 13,
-          "cursorAfter": 14
-        },
-        {
-          "time": 162.71994,
-          "eventType": 0,
-          "character": "n",
-          "cursorBefore": 14,
-          "cursorAfter": 15
-        },
-        {
-          "time": 163.379944,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 15,
-          "cursorAfter": 14
-        },
-        {
-          "time": 164.059937,
-          "eventType": 0,
-          "character": "m",
-          "cursorBefore": 14,
-          "cursorAfter": 15
-        },
-        {
-          "time": 165.679947,
-          "eventType": 0,
-          "character": "b",
-          "cursorBefore": 15,
-          "cursorAfter": 16
-        },
-        {
-          "time": 167.199936,
-          "eventType": 0,
-          "character": "u",
           "cursorBefore": 16,
           "cursorAfter": 17
         },
         {
-          "time": 167.519943,
+          "time": 155.999939,
           "eventType": 0,
-          "character": "r",
+          "character": "u",
           "cursorBefore": 17,
           "cursorAfter": 18
         },
         {
-          "time": 167.919937,
+          "time": 157.039948,
           "eventType": 0,
-          "character": "g",
+          "character": " ",
           "cursorBefore": 18,
           "cursorAfter": 19
         },
         {
-          "time": 168.159943,
+          "time": 157.579941,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 158.599945,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 18,
+          "cursorAfter": 17
+        },
+        {
+          "time": 159.439941,
           "eventType": 0,
-          "character": "e",
+          "character": "z",
+          "cursorBefore": 17,
+          "cursorAfter": 18
+        },
+        {
+          "time": 159.919937,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 160.159943,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 161.119949,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 18,
+          "cursorAfter": 17
+        },
+        {
+          "time": 162.499939,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 17,
+          "cursorAfter": 18
+        },
+        {
+          "time": 163.419937,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 163.999939,
+          "eventType": 0,
+          "character": "o",
           "cursorBefore": 19,
           "cursorAfter": 20
         },
         {
-          "time": 169.159943,
+          "time": 164.679947,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 165.559937,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 166.899948,
           "eventType": 0,
-          "character": "r",
+          "character": "o",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 169.079941,
+          "eventType": 0,
+          "character": "d",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 171.139938,
+          "eventType": 0,
+          "character": " ",
           "cursorBefore": 20,
           "cursorAfter": 21
         },
         {
-          "time": 170.339935,
+          "time": 172.799942,
           "eventType": 0,
-          "character": " ",
+          "character": "c",
           "cursorBefore": 21,
           "cursorAfter": 22
         },
         {
-          "time": 170.879944,
+          "time": 173.799942,
           "eventType": 0,
-          "character": "i",
+          "character": "l",
           "cursorBefore": 22,
           "cursorAfter": 23
         },
         {
-          "time": 171.899933,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 23,
-          "cursorAfter": 22
-        },
-        {
-          "time": 172.839935,
+          "time": 174.399933,
           "eventType": 0,
-          "character": " ",
-          "cursorBefore": 22,
-          "cursorAfter": 23
-        },
-        {
-          "time": 173.579941,
-          "eventType": 0,
-          "character": "i",
+          "character": "e",
           "cursorBefore": 23,
           "cursorAfter": 24
         },
         {
-          "time": 174.439941,
+          "time": 175.35994,
           "eventType": 1,
           "character": "\u0000",
           "cursorBefore": 24,
           "cursorAfter": 23
         },
         {
-          "time": 174.839935,
+          "time": 175.85994,
           "eventType": 1,
           "character": "\u0000",
           "cursorBefore": 23,
           "cursorAfter": 22
-        },
-        {
-          "time": 175.479935,
-          "eventType": 0,
-          "character": " ",
-          "cursorBefore": 22,
-          "cursorAfter": 23
-        },
-        {
-          "time": 176.399933,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 23,
-          "cursorAfter": 22
-        },
-        {
-          "time": 177.179932,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 22,
-          "cursorAfter": 23
         },
         {
           "time": 177.199936,
           "eventType": 0,
-          "character": "j",
-          "cursorBefore": 23,
-          "cursorAfter": 24
-        },
-        {
-          "time": 177.879944,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 24,
-          "cursorAfter": 23
-        },
-        {
-          "time": 178.259933,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 23,
-          "cursorAfter": 22
-        },
-        {
-          "time": 178.639938,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 22,
-          "cursorAfter": 21
-        },
-        {
-          "time": 184.019928,
-          "eventType": 0,
-          "character": "i",
-          "cursorBefore": 21,
-          "cursorAfter": 22
-        },
-        {
-          "time": 185.419937,
-          "eventType": 1,
-          "character": "\u0000",
-          "cursorBefore": 22,
-          "cursorAfter": 21
-        },
-        {
-          "time": 185.439941,
-          "eventType": 0,
-          "character": "\u0000",
-          "cursorBefore": 21,
-          "cursorAfter": 22
-        },
-        {
-          "time": 185.479935,
-          "eventType": 0,
-          "character": "\u0000",
+          "character": "o",
           "cursorBefore": 22,
           "cursorAfter": 23
         },
         {
-          "time": 186.139938,
+          "time": 178.419937,
           "eventType": 0,
-          "character": " ",
+          "character": "o",
           "cursorBefore": 23,
           "cursorAfter": 24
         },
         {
-          "time": 186.659927,
+          "time": 180.59993,
           "eventType": 0,
-          "character": "i",
+          "character": "k",
           "cursorBefore": 24,
           "cursorAfter": 25
         },
         {
-          "time": 187.479935,
+          "time": 183.09993,
           "eventType": 0,
-          "character": "i",
+          "character": "l",
           "cursorBefore": 25,
           "cursorAfter": 26
         },
         {
-          "time": 188.139938,
+          "time": 184.199936,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 184.659927,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 185.179932,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 186.839935,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 187.179932,
           "eventType": 0,
           "character": "i",
           "cursorBefore": 26,
           "cursorAfter": 27
         },
         {
-          "time": 188.919937,
+          "time": 187.59993,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 188.119934,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 190.159927,
           "eventType": 0,
           "character": "i",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 192.279938,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 193.919937,
+          "eventType": 0,
+          "character": "l",
           "cursorBefore": 27,
           "cursorAfter": 28
         },
         {
-          "time": 189.21994,
+          "time": 194.899933,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 196.059937,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 196.899933,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 197.439926,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 197.839935,
+          "eventType": 0,
+          "character": "y",
+          "cursorBefore": 28,
+          "cursorAfter": 29
+        }
+      ]
+    },
+    {
+      "phraseIndex": 1,
+      "targetPhrase": "salesmen must make their monthly quota\r",
+      "finalText": "salesmen must make their monthly quotzm",
+      "startTime": 197.839935,
+      "endTime": 417.359863,
+      "events": [
+        {
+          "time": 201.699936,
+          "eventType": 0,
+          "character": "s",
+          "cursorBefore": 0,
+          "cursorAfter": 1
+        },
+        {
+          "time": 204.039932,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 1,
+          "cursorAfter": 2
+        },
+        {
+          "time": 205.999924,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 2,
+          "cursorAfter": 3
+        },
+        {
+          "time": 207.019928,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 3,
+          "cursorAfter": 2
+        },
+        {
+          "time": 208.359924,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 2,
+          "cursorAfter": 3
+        },
+        {
+          "time": 210.019928,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 3,
+          "cursorAfter": 4
+        },
+        {
+          "time": 211.419922,
+          "eventType": 0,
+          "character": "c",
+          "cursorBefore": 4,
+          "cursorAfter": 5
+        },
+        {
+          "time": 212.119919,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 5,
+          "cursorAfter": 4
+        },
+        {
+          "time": 213.359924,
+          "eventType": 0,
+          "character": "s",
+          "cursorBefore": 4,
+          "cursorAfter": 5
+        },
+        {
+          "time": 216.999924,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 5,
+          "cursorAfter": 6
+        },
+        {
+          "time": 218.659927,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 220.039917,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 7,
+          "cursorAfter": 8
+        },
+        {
+          "time": 221.399918,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 8,
+          "cursorAfter": 7
+        },
+        {
+          "time": 222.899918,
+          "eventType": 0,
+          "character": "n",
+          "cursorBefore": 7,
+          "cursorAfter": 8
+        },
+        {
+          "time": 225.659927,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 8,
+          "cursorAfter": 9
+        },
+        {
+          "time": 227.079926,
+          "eventType": 0,
+          "character": "n",
+          "cursorBefore": 9,
+          "cursorAfter": 10
+        },
+        {
+          "time": 227.359924,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 228.559921,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 11,
+          "cursorAfter": 10
+        },
+        {
+          "time": 229.199921,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 10,
+          "cursorAfter": 9
+        },
+        {
+          "time": 231.119919,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 9,
+          "cursorAfter": 10
+        },
+        {
+          "time": 233.57991,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 233.699921,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 11,
+          "cursorAfter": 12
+        },
+        {
+          "time": 234.259918,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 12,
+          "cursorAfter": 11
+        },
+        {
+          "time": 235.279922,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 11,
+          "cursorAfter": 10
+        },
+        {
+          "time": 236.519913,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 239.359909,
+          "eventType": 0,
+          "character": "y",
+          "cursorBefore": 11,
+          "cursorAfter": 12
+        },
+        {
+          "time": 240.059921,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 12,
+          "cursorAfter": 11
+        },
+        {
+          "time": 241.419922,
+          "eventType": 0,
+          "character": "s",
+          "cursorBefore": 11,
+          "cursorAfter": 12
+        },
+        {
+          "time": 243.539917,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 245.459915,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 13,
+          "cursorAfter": 14
+        },
+        {
+          "time": 248.239914,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 14,
+          "cursorAfter": 15
+        },
+        {
+          "time": 250.21991,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 15,
+          "cursorAfter": 16
+        },
+        {
+          "time": 252.159912,
+          "eventType": 0,
+          "character": "h",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 252.899918,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 17,
+          "cursorAfter": 16
+        },
+        {
+          "time": 254.57991,
+          "eventType": 0,
+          "character": "k",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 256.2199,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 17,
+          "cursorAfter": 18
+        },
+        {
+          "time": 257.5999,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 258.9399,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 259.8799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 260.699921,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 261.1599,
+          "eventType": 0,
+          "character": "s",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 261.5199,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 21,
+          "cursorAfter": 20
+        },
+        {
+          "time": 263.7799,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 264.5799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 21,
+          "cursorAfter": 20
+        },
+        {
+          "time": 265.479919,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 265.5599,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 21,
+          "cursorAfter": 22
+        },
+        {
+          "time": 266.0199,
           "eventType": 0,
           "character": "i",
+          "cursorBefore": 22,
+          "cursorAfter": 23
+        },
+        {
+          "time": 266.2399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 23,
+          "cursorAfter": 22
+        },
+        {
+          "time": 266.7399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 22,
+          "cursorAfter": 21
+        },
+        {
+          "time": 267.6999,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 21,
+          "cursorAfter": 20
+        },
+        {
+          "time": 269.3399,
+          "eventType": 0,
+          "character": "h",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 271.9799,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 21,
+          "cursorAfter": 22
+        },
+        {
+          "time": 274.7599,
+          "eventType": 0,
+          "character": "j",
+          "cursorBefore": 22,
+          "cursorAfter": 23
+        },
+        {
+          "time": 275.4399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 23,
+          "cursorAfter": 22
+        },
+        {
+          "time": 277.1399,
+          "eventType": 0,
+          "character": "j",
+          "cursorBefore": 22,
+          "cursorAfter": 23
+        },
+        {
+          "time": 277.4399,
+          "eventType": 0,
+          "character": "z",
+          "cursorBefore": 23,
+          "cursorAfter": 24
+        },
+        {
+          "time": 277.7999,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 24,
+          "cursorAfter": 23
+        },
+        {
+          "time": 278.7199,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 23,
+          "cursorAfter": 22
+        },
+        {
+          "time": 280.8399,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 22,
+          "cursorAfter": 23
+        },
+        {
+          "time": 283.5999,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 23,
+          "cursorAfter": 24
+        },
+        {
+          "time": 284.2399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 24,
+          "cursorAfter": 23
+        },
+        {
+          "time": 287.3399,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 23,
+          "cursorAfter": 24
+        },
+        {
+          "time": 288.0799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 24,
+          "cursorAfter": 23
+        },
+        {
+          "time": 289.2399,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 23,
+          "cursorAfter": 24
+        },
+        {
+          "time": 290.6399,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 292.0399,
+          "eventType": 0,
+          "character": "n",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 292.2399,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 293.1999,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 293.7799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 294.8599,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 295.8599,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 297.3999,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 297.5799,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 298.159882,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 299.7799,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 300.4599,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 301.379883,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 303.0799,
+          "eventType": 0,
+          "character": "n",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 303.659882,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 304.3999,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 306.5199,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 306.6999,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 307.159882,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 307.7999,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 308.7599,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 309.8199,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 310.2599,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 312.0199,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 313.7399,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 314.7999,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 315.7599,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 315.8999,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 316.4199,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 317.1799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 317.8599,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 318.2999,
+          "eventType": 0,
+          "character": "j",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 318.619873,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 319.119873,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 320.1999,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 320.9799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 322.159882,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 323.179871,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 324.679871,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 326.8599,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 326.9799,
+          "eventType": 0,
+          "character": "r",
           "cursorBefore": 28,
           "cursorAfter": 29
         },
         {
-          "time": 189.439926,
+          "time": 327.5399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 29,
+          "cursorAfter": 28
+        },
+        {
+          "time": 328.0399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 329.3599,
           "eventType": 0,
-          "character": "i",
+          "character": "v",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 329.499878,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 28,
+          "cursorAfter": 29
+        },
+        {
+          "time": 330.0799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 29,
+          "cursorAfter": 28
+        },
+        {
+          "time": 330.6399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 332.0399,
+          "eventType": 0,
+          "character": "p",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 332.1999,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 28,
+          "cursorAfter": 29
+        },
+        {
+          "time": 332.5799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 29,
+          "cursorAfter": 28
+        },
+        {
+          "time": 333.0799,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 334.9199,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 335.6399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 336.239868,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 27,
+          "cursorAfter": 26
+        },
+        {
+          "time": 337.7599,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 26,
+          "cursorAfter": 27
+        },
+        {
+          "time": 339.219879,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 340.0399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 28,
+          "cursorAfter": 27
+        },
+        {
+          "time": 341.3599,
+          "eventType": 0,
+          "character": "n",
+          "cursorBefore": 27,
+          "cursorAfter": 28
+        },
+        {
+          "time": 343.619873,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 28,
+          "cursorAfter": 29
+        },
+        {
+          "time": 344.4199,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 29,
+          "cursorAfter": 28
+        },
+        {
+          "time": 345.379883,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 28,
+          "cursorAfter": 29
+        },
+        {
+          "time": 345.879883,
+          "eventType": 0,
+          "character": "s",
           "cursorBefore": 29,
           "cursorAfter": 30
         },
         {
-          "time": 189.659927,
+          "time": 347.359863,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 30,
+          "cursorAfter": 29
+        },
+        {
+          "time": 349.519867,
           "eventType": 0,
-          "character": "i",
+          "character": "m",
+          "cursorBefore": 29,
+          "cursorAfter": 30
+        },
+        {
+          "time": 350.43988,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 30,
+          "cursorAfter": 29
+        },
+        {
+          "time": 351.719879,
+          "eventType": 0,
+          "character": "b",
+          "cursorBefore": 29,
+          "cursorAfter": 30
+        },
+        {
+          "time": 352.5399,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 30,
+          "cursorAfter": 29
+        },
+        {
+          "time": 353.779877,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 29,
+          "cursorAfter": 30
+        },
+        {
+          "time": 354.859863,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 30,
+          "cursorAfter": 29
+        },
+        {
+          "time": 356.139862,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 29,
+          "cursorAfter": 30
+        },
+        {
+          "time": 356.339874,
+          "eventType": 0,
+          "character": "w",
           "cursorBefore": 30,
           "cursorAfter": 31
         },
         {
-          "time": 189.879929,
+          "time": 356.859863,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 31,
+          "cursorAfter": 30
+        },
+        {
+          "time": 357.479858,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 30,
+          "cursorAfter": 29
+        },
+        {
+          "time": 358.359863,
           "eventType": 0,
-          "character": "i",
+          "character": "r",
+          "cursorBefore": 29,
+          "cursorAfter": 30
+        },
+        {
+          "time": 359.099884,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 30,
+          "cursorAfter": 31
+        },
+        {
+          "time": 359.559875,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 31,
+          "cursorAfter": 30
+        },
+        {
+          "time": 360.059875,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 30,
+          "cursorAfter": 29
+        },
+        {
+          "time": 361.759857,
+          "eventType": 0,
+          "character": "h",
+          "cursorBefore": 29,
+          "cursorAfter": 30
+        },
+        {
+          "time": 364.519867,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 30,
+          "cursorAfter": 31
+        },
+        {
+          "time": 366.579865,
+          "eventType": 0,
+          "character": "y",
           "cursorBefore": 31,
           "cursorAfter": 32
         },
         {
-          "time": 190.139938,
+          "time": 367.93988,
           "eventType": 0,
-          "character": "i",
+          "character": " ",
           "cursorBefore": 32,
           "cursorAfter": 33
         },
         {
-          "time": 192.119934,
+          "time": 369.43988,
           "eventType": 0,
-          "character": "h",
+          "character": "q",
           "cursorBefore": 33,
           "cursorAfter": 34
         },
         {
-          "time": 192.139938,
+          "time": 371.099854,
           "eventType": 0,
-          "character": "g",
+          "character": "v",
           "cursorBefore": 34,
           "cursorAfter": 35
         },
         {
-          "time": 192.159927,
+          "time": 372.619873,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 35,
+          "cursorAfter": 34
+        },
+        {
+          "time": 374.119873,
           "eventType": 0,
           "character": "v",
+          "cursorBefore": 34,
+          "cursorAfter": 35
+        },
+        {
+          "time": 375.319855,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 35,
+          "cursorAfter": 34
+        },
+        {
+          "time": 376.139862,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 34,
+          "cursorAfter": 35
+        },
+        {
+          "time": 376.459869,
+          "eventType": 0,
+          "character": "m",
           "cursorBefore": 35,
           "cursorAfter": 36
         },
         {
-          "time": 192.179932,
+          "time": 377.139862,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 378.059875,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 35,
+          "cursorAfter": 34
+        },
+        {
+          "time": 379.399872,
           "eventType": 0,
-          "character": "c",
+          "character": "v",
+          "cursorBefore": 34,
+          "cursorAfter": 35
+        },
+        {
+          "time": 380.059875,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 35,
+          "cursorAfter": 34
+        },
+        {
+          "time": 380.999878,
+          "eventType": 0,
+          "character": "q",
+          "cursorBefore": 34,
+          "cursorAfter": 35
+        },
+        {
+          "time": 381.43985,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 381.559875,
+          "eventType": 0,
+          "character": "r",
           "cursorBefore": 36,
           "cursorAfter": 37
         },
         {
-          "time": 192.199936,
+          "time": 382.059875,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 37,
+          "cursorAfter": 36
+        },
+        {
+          "time": 382.879852,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 383.43985,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 35,
+          "cursorAfter": 34
+        },
+        {
+          "time": 384.599854,
           "eventType": 0,
-          "character": " ",
+          "character": "u",
+          "cursorBefore": 34,
+          "cursorAfter": 35
+        },
+        {
+          "time": 386.379852,
+          "eventType": 0,
+          "character": "q",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 387.179871,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 387.859863,
+          "eventType": 0,
+          "character": "x",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 388.219849,
+          "eventType": 0,
+          "character": "g",
+          "cursorBefore": 36,
+          "cursorAfter": 37
+        },
+        {
+          "time": 388.559875,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 37,
+          "cursorAfter": 36
+        },
+        {
+          "time": 389.139862,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 390.379852,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 391.459869,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 392.179871,
+          "eventType": 0,
+          "character": "d",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 392.839874,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 36,
+          "cursorAfter": 37
+        },
+        {
+          "time": 393.379852,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 37,
+          "cursorAfter": 36
+        },
+        {
+          "time": 394.039856,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 394.579865,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 395.019867,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 36,
+          "cursorAfter": 37
+        },
+        {
+          "time": 395.179871,
+          "eventType": 0,
+          "character": "n",
           "cursorBefore": 37,
           "cursorAfter": 38
         },
         {
-          "time": 192.399933,
+          "time": 395.619873,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 38,
+          "cursorAfter": 37
+        },
+        {
+          "time": 396.119873,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 37,
+          "cursorAfter": 36
+        },
+        {
+          "time": 396.759857,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 397.959869,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 398.739868,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 399.19986,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 399.959869,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 36,
+          "cursorAfter": 37
+        },
+        {
+          "time": 400.519867,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 37,
+          "cursorAfter": 36
+        },
+        {
+          "time": 401.43985,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 401.859863,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 402.479858,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 36,
+          "cursorAfter": 37
+        },
+        {
+          "time": 402.659851,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 37,
+          "cursorAfter": 38
+        },
+        {
+          "time": 403.119843,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 38,
+          "cursorAfter": 37
+        },
+        {
+          "time": 403.659851,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 37,
+          "cursorAfter": 36
+        },
+        {
+          "time": 404.219849,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 404.899841,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 405.319855,
           "eventType": 0,
           "character": "u",
+          "cursorBefore": 36,
+          "cursorAfter": 37
+        },
+        {
+          "time": 405.519867,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 37,
+          "cursorAfter": 38
+        },
+        {
+          "time": 406.159851,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 38,
+          "cursorAfter": 37
+        },
+        {
+          "time": 406.69986,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 37,
+          "cursorAfter": 36
+        },
+        {
+          "time": 407.779846,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 409.219849,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 409.899841,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 36,
+          "cursorAfter": 35
+        },
+        {
+          "time": 411.17984,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 35,
+          "cursorAfter": 36
+        },
+        {
+          "time": 413.499847,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 36,
+          "cursorAfter": 37
+        },
+        {
+          "time": 413.979858,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 37,
+          "cursorAfter": 36
+        },
+        {
+          "time": 415.279846,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 36,
+          "cursorAfter": 37
+        },
+        {
+          "time": 416.799866,
+          "eventType": 0,
+          "character": "z",
+          "cursorBefore": 37,
+          "cursorAfter": 38
+        },
+        {
+          "time": 417.359863,
+          "eventType": 0,
+          "character": "m",
           "cursorBefore": 38,
           "cursorAfter": 39
+        }
+      ]
+    },
+    {
+      "phraseIndex": 2,
+      "targetPhrase": "are you sure you want this\r",
+      "finalText": "are you sure you want this ",
+      "startTime": 417.359863,
+      "endTime": 579.2198,
+      "events": [
+        {
+          "time": 421.779846,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 0,
+          "cursorAfter": 1
+        },
+        {
+          "time": 422.899841,
+          "eventType": 0,
+          "character": "p",
+          "cursorBefore": 1,
+          "cursorAfter": 2
+        },
+        {
+          "time": 423.69986,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 2,
+          "cursorAfter": 3
+        },
+        {
+          "time": 424.059845,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 3,
+          "cursorAfter": 2
+        },
+        {
+          "time": 424.579865,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 2,
+          "cursorAfter": 1
+        },
+        {
+          "time": 425.819855,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 1,
+          "cursorAfter": 2
+        },
+        {
+          "time": 426.43985,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 2,
+          "cursorAfter": 1
+        },
+        {
+          "time": 427.639862,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 1,
+          "cursorAfter": 2
+        },
+        {
+          "time": 429.639862,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 2,
+          "cursorAfter": 3
+        },
+        {
+          "time": 431.539856,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 3,
+          "cursorAfter": 4
+        },
+        {
+          "time": 432.999847,
+          "eventType": 0,
+          "character": "g",
+          "cursorBefore": 4,
+          "cursorAfter": 5
+        },
+        {
+          "time": 433.739838,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 5,
+          "cursorAfter": 4
+        },
+        {
+          "time": 435.059845,
+          "eventType": 0,
+          "character": "y",
+          "cursorBefore": 4,
+          "cursorAfter": 5
+        },
+        {
+          "time": 439.499847,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 5,
+          "cursorAfter": 6
+        },
+        {
+          "time": 440.239838,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 6,
+          "cursorAfter": 5
+        },
+        {
+          "time": 441.399841,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 5,
+          "cursorAfter": 6
+        },
+        {
+          "time": 441.91983,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 6,
+          "cursorAfter": 5
+        },
+        {
+          "time": 442.899841,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 5,
+          "cursorAfter": 6
+        },
+        {
+          "time": 444.279846,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 6,
+          "cursorAfter": 7
+        },
+        {
+          "time": 446.079834,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 7,
+          "cursorAfter": 8
+        },
+        {
+          "time": 447.319855,
+          "eventType": 0,
+          "character": "s",
+          "cursorBefore": 8,
+          "cursorAfter": 9
+        },
+        {
+          "time": 448.619843,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 9,
+          "cursorAfter": 10
+        },
+        {
+          "time": 449.159851,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 449.579834,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 11,
+          "cursorAfter": 12
+        },
+        {
+          "time": 449.659851,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 450.359833,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 13,
+          "cursorAfter": 14
+        },
+        {
+          "time": 450.819855,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 14,
+          "cursorAfter": 13
+        },
+        {
+          "time": 451.619843,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
+        },
+        {
+          "time": 452.119843,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 12,
+          "cursorAfter": 11
+        },
+        {
+          "time": 452.67984,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 11,
+          "cursorAfter": 10
+        },
+        {
+          "time": 453.759827,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 454.359833,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 11,
+          "cursorAfter": 10
+        },
+        {
+          "time": 455.379852,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 10,
+          "cursorAfter": 11
+        },
+        {
+          "time": 456.479828,
+          "eventType": 0,
+          "character": "x",
+          "cursorBefore": 11,
+          "cursorAfter": 12
+        },
+        {
+          "time": 457.119843,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 457.659851,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 13,
+          "cursorAfter": 12
+        },
+        {
+          "time": 458.619843,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 12,
+          "cursorAfter": 11
+        },
+        {
+          "time": 459.659851,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 11,
+          "cursorAfter": 12
+        },
+        {
+          "time": 460.519836,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 12,
+          "cursorAfter": 13
+        },
+        {
+          "time": 462.079834,
+          "eventType": 0,
+          "character": "y",
+          "cursorBefore": 13,
+          "cursorAfter": 14
+        },
+        {
+          "time": 463.039825,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 14,
+          "cursorAfter": 15
+        },
+        {
+          "time": 463.619843,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 15,
+          "cursorAfter": 16
+        },
+        {
+          "time": 464.359833,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 464.739838,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 17,
+          "cursorAfter": 16
+        },
+        {
+          "time": 465.659821,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 16,
+          "cursorAfter": 15
+        },
+        {
+          "time": 466.17984,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 15,
+          "cursorAfter": 14
+        },
+        {
+          "time": 467.259827,
+          "eventType": 0,
+          "character": "e",
+          "cursorBefore": 14,
+          "cursorAfter": 15
+        },
+        {
+          "time": 467.859833,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 15,
+          "cursorAfter": 14
+        },
+        {
+          "time": 468.479828,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 14,
+          "cursorAfter": 15
+        },
+        {
+          "time": 468.819824,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 15,
+          "cursorAfter": 16
+        },
+        {
+          "time": 469.17984,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 16,
+          "cursorAfter": 15
+        },
+        {
+          "time": 470.159821,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 15,
+          "cursorAfter": 14
+        },
+        {
+          "time": 471.239838,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 14,
+          "cursorAfter": 15
+        },
+        {
+          "time": 472.159821,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 15,
+          "cursorAfter": 16
+        },
+        {
+          "time": 472.619843,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 472.939819,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 17,
+          "cursorAfter": 16
+        },
+        {
+          "time": 473.479828,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 16,
+          "cursorAfter": 15
+        },
+        {
+          "time": 474.399841,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 15,
+          "cursorAfter": 16
+        },
+        {
+          "time": 474.639832,
+          "eventType": 0,
+          "character": "p",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 474.91983,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 17,
+          "cursorAfter": 16
+        },
+        {
+          "time": 475.519836,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 16,
+          "cursorAfter": 15
+        },
+        {
+          "time": 476.779846,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 15,
+          "cursorAfter": 16
+        },
+        {
+          "time": 479.719818,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 480.559845,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 17,
+          "cursorAfter": 18
+        },
+        {
+          "time": 480.999817,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 18,
+          "cursorAfter": 17
+        },
+        {
+          "time": 481.579834,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 17,
+          "cursorAfter": 16
+        },
+        {
+          "time": 483.439819,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 484.199829,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 17,
+          "cursorAfter": 16
+        },
+        {
+          "time": 487.659821,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 16,
+          "cursorAfter": 15
+        },
+        {
+          "time": 491.759827,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 15,
+          "cursorAfter": 16
+        },
+        {
+          "time": 492.1198,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 492.539825,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 17,
+          "cursorAfter": 16
+        },
+        {
+          "time": 493.079834,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 16,
+          "cursorAfter": 15
+        },
+        {
+          "time": 494.239838,
+          "eventType": 0,
+          "character": "u",
+          "cursorBefore": 15,
+          "cursorAfter": 16
+        },
+        {
+          "time": 497.91983,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 16,
+          "cursorAfter": 17
+        },
+        {
+          "time": 499.599823,
+          "eventType": 0,
+          "character": "w",
+          "cursorBefore": 17,
+          "cursorAfter": 18
+        },
+        {
+          "time": 502.499817,
+          "eventType": 0,
+          "character": "v",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 502.879822,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 503.359833,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 503.9598,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 504.5598,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 505.139832,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 505.41983,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 506.039825,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 506.639832,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 507.219818,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 507.3398,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 508.0198,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 508.499817,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 509.219818,
+          "eventType": 0,
+          "character": "o",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 510.439819,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 511.0198,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 511.659821,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 512.3198,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 512.5998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 513.7198,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 514.2198,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 514.9798,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 515.7998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 516.3598,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 517.0598,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 517.639832,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 517.8198,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 518.3798,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 19,
+          "cursorAfter": 18
+        },
+        {
+          "time": 519.7598,
+          "eventType": 0,
+          "character": "a",
+          "cursorBefore": 18,
+          "cursorAfter": 19
+        },
+        {
+          "time": 520.899841,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 521.579834,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 521.7998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 21,
+          "cursorAfter": 20
+        },
+        {
+          "time": 522.3198,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 523.639832,
+          "eventType": 0,
+          "character": "p",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 524.339844,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 526.6998,
+          "eventType": 0,
+          "character": "m",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 527.2798,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 528.2198,
+          "eventType": 0,
+          "character": "r",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 528.5998,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 528.8198,
+          "eventType": 0,
+          "character": "y",
+          "cursorBefore": 21,
+          "cursorAfter": 22
+        },
+        {
+          "time": 529.079834,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 22,
+          "cursorAfter": 21
+        },
+        {
+          "time": 529.6598,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 21,
+          "cursorAfter": 20
+        },
+        {
+          "time": 530.6598,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 531.2998,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 531.8798,
+          "eventType": 0,
+          "character": "q",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 532.2398,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 21,
+          "cursorAfter": 20
+        },
+        {
+          "time": 532.7398,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 533.3598,
+          "eventType": 0,
+          "character": "w",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 533.459839,
+          "eventType": 0,
+          "character": "w",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 534.0598,
+          "eventType": 0,
+          "character": "q",
+          "cursorBefore": 21,
+          "cursorAfter": 22
+        },
+        {
+          "time": 534.2798,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 22,
+          "cursorAfter": 21
+        },
+        {
+          "time": 534.7798,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 21,
+          "cursorAfter": 20
+        },
+        {
+          "time": 535.9198,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 20,
+          "cursorAfter": 19
+        },
+        {
+          "time": 537.579834,
+          "eventType": 0,
+          "character": "n",
+          "cursorBefore": 19,
+          "cursorAfter": 20
+        },
+        {
+          "time": 539.6998,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 20,
+          "cursorAfter": 21
+        },
+        {
+          "time": 542.1998,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 21,
+          "cursorAfter": 22
+        },
+        {
+          "time": 545.9798,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 22,
+          "cursorAfter": 23
+        },
+        {
+          "time": 546.4598,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 23,
+          "cursorAfter": 24
+        },
+        {
+          "time": 546.7598,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 24,
+          "cursorAfter": 23
+        },
+        {
+          "time": 547.6798,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 23,
+          "cursorAfter": 22
+        },
+        {
+          "time": 549.3998,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 22,
+          "cursorAfter": 23
+        },
+        {
+          "time": 553.3198,
+          "eventType": 0,
+          "character": "h",
+          "cursorBefore": 23,
+          "cursorAfter": 24
+        },
+        {
+          "time": 555.9598,
+          "eventType": 0,
+          "character": "j",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 556.5398,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 557.139832,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 558.3398,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 558.5198,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 559.0598,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 559.6598,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 560.9598,
+          "eventType": 0,
+          "character": "l",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 561.3998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 562.3998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 564.4198,
+          "eventType": 0,
+          "character": "q",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 564.9798,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 567.2798,
+          "eventType": 0,
+          "character": "x",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 567.8398,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 569.9198,
+          "eventType": 0,
+          "character": "x",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 570.5598,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 571.5198,
+          "eventType": 0,
+          "character": "t",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 572.1598,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 572.3198,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 572.9398,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 25,
+          "cursorAfter": 24
+        },
+        {
+          "time": 573.5598,
+          "eventType": 0,
+          "character": "i",
+          "cursorBefore": 24,
+          "cursorAfter": 25
+        },
+        {
+          "time": 574.1598,
+          "eventType": 0,
+          "character": "p",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 574.3398,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 575.7798,
+          "eventType": 0,
+          "character": "f",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 576.7998,
+          "eventType": 1,
+          "character": "\u0000",
+          "cursorBefore": 26,
+          "cursorAfter": 25
+        },
+        {
+          "time": 577.8998,
+          "eventType": 0,
+          "character": "s",
+          "cursorBefore": 25,
+          "cursorAfter": 26
+        },
+        {
+          "time": 579.2198,
+          "eventType": 0,
+          "character": " ",
+          "cursorBefore": 26,
+          "cursorAfter": 27
         }
       ]
     }
