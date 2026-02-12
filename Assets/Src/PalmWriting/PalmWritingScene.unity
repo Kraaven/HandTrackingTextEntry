@@ -321,7 +321,7 @@ MonoBehaviour:
   projectedLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   rawLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   showDebugPlane: 1
-  RecogniseGesture: 0
+  RecogniseGesture: 1
 --- !u!1 &889340627
 GameObject:
   m_ObjectHideFlags: 0
