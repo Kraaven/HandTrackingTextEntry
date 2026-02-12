@@ -1,450 +1,402 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.IO;
+using System.Linq;
+using UnityEngine.Networking;
 using PDollarGestureRecognizer;
 using Newtonsoft.Json;
 
 public class PalmInputHandler : MonoBehaviour
 {
+    public static PalmInputHandler Instance { get; private set; }
+
     [Header("Sampling")]
-    [SerializeField] private float threshold = 0.01f;
+    [SerializeField] private float sampleThreshold = 0.01f;
 
-    [Header("Drawing Style References")]
-    [SerializeField] private LineRenderer projectedLineRenderer;  // For projected points
-    [SerializeField] private LineRenderer rawLineRenderer;        // For raw points
+    [Header("Line Rendering")]
+    [SerializeField] private LineRenderer projectedLine;
+    [SerializeField] private LineRenderer rawLine;
     [SerializeField] private float lineWidth = 0.005f;
-    [SerializeField] private Material projectedLineMaterial;      // Green material
-    [SerializeField] private Material rawLineMaterial;            // Red material
 
-    [Header("Gesture Save Settings")]
-    private string gestureSavePath = Path.Combine(Application.streamingAssetsPath, "Gestures");
+    [Header("Gesture Recognition")]
+    [SerializeField] private bool recogniseGesture = true;
+    [SerializeField] private bool logGestureDebug = true;
+
 
     [Header("Debug")]
     [SerializeField] private bool showDebugPlane = true;
-    public bool RecogniseGesture;
 
-    private bool recordInput;
+    private readonly List<Vector3> projectedSamples = new();
+    private readonly List<Vector3> rawSamples = new();
+
     private FingerTipCollider activeFinger;
+    private bool isRecording;
+
     private Plane drawingPlane;
-
-    // Store both raw and projected world space positions
-    private readonly List<Vector3> samplesWorld3D = new();       // Projected points
-    private readonly List<Vector3> rawSamplesWorld3D = new();    // Raw points
-    private Vector3 lastSampleWorld;
-    private Vector3 lastRawSampleWorld;
-
-    // Store the plane transform at gesture start
     private Vector3 planeNormal;
-    private Vector3 planePosition;
+    private Vector3 planeOrigin;
 
-    private Gesture CurrentGesture;
-    private Point[] CurrentPointSet;
+    private Vector3 lastProjectedSample;
+    private Vector3 lastRawSample;
 
-    private Gesture[] GestureSet;
+    private Gesture[] gestureSet;
+    private Gesture currentGesture;
+    private Point[] currentPointSet;
 
-    public static PalmInputHandler Instance { get; private set; }
+    private string GesturePath => Path.Combine(Application.streamingAssetsPath, "Gestures");
 
-    void Awake()
+    #region Unity Lifecycle
+
+    private void Awake()
     {
         if (Instance == null) Instance = this;
-        else Destroy(this);
+        else Destroy(gameObject);
 
-            projectedLineRenderer.useWorldSpace = false;
-        projectedLineRenderer.startWidth = lineWidth;
-        projectedLineRenderer.endWidth = lineWidth;
+        SetupLineRenderer(projectedLine);
+        SetupLineRenderer(rawLine);
 
-        rawLineRenderer.useWorldSpace = false;
-        rawLineRenderer.positionCount = 0;
-        rawLineRenderer.startWidth = lineWidth;
-        rawLineRenderer.endWidth = lineWidth;
+#if UNITY_EDITOR
+        GenerateGestureIndex();
+#endif
 
-        // Ensure gesture save directory exists
-        if (!Directory.Exists(gestureSavePath))
-        {
-            Directory.CreateDirectory(gestureSavePath);
-        }
-
-        if (RecogniseGesture)
-        {
-            var Gestures = new List<Gesture>();
-
-            if (!Directory.Exists(gestureSavePath))
-            {
-                Debug.LogWarning($"Gesture path not found: {gestureSavePath}");
-                return;
-            }
-
-            string[] files = Directory.GetFiles(gestureSavePath);
-
-            foreach (string file in files)
-            {
-                if (Path.GetExtension(file).ToLower() != ".json")
-                    continue;
-
-                try
-                {
-                    string json = File.ReadAllText(file);
-                    Gesture gesture = JsonConvert.DeserializeObject<Gesture>(json);
-
-                    if (gesture != null)
-                        Gestures.Add(gesture);
-                }
-                catch (System.Exception e)
-                {
-                    Debug.LogError($"Failed to load gesture file: {file}\n{e}");
-                }
-            }
-
-            GestureSet = Gestures.ToArray();
-        }
+        if (recogniseGesture)
+            StartCoroutine(LoadGestures());
     }
+
+#if UNITY_EDITOR
+    private void GenerateGestureIndex()
+    {
+        if (!Directory.Exists(GesturePath))
+            Directory.CreateDirectory(GesturePath);
+
+        string indexPath = Path.Combine(GesturePath, "index.txt");
+
+        var files = Directory
+            .GetFiles(GesturePath, "*.json")
+            .Select(Path.GetFileName)
+            .ToArray();
+
+        File.WriteAllLines(indexPath, files);
+
+        Debug.Log($"[Gesture Index] Generated index.txt with {files.Length} entries");
+    }
+#endif
+
+
+    #endregion
+
+    #region Gesture Loading (ANDROID SAFE)
+
+    private IEnumerator LoadGestures()
+    {
+        var gestures = new List<Gesture>();
+
+        if (!Directory.Exists(GesturePath) && !Application.isEditor)
+        {
+            Debug.LogWarning($"Gesture directory not found: {GesturePath}");
+            yield break;
+        }
+
+#if UNITY_ANDROID && !UNITY_EDITOR
+    // REAL Android device path (APK)
+    string indexPath = Path.Combine(GesturePath, "index.txt");
+
+    using UnityWebRequest indexRequest = UnityWebRequest.Get(indexPath);
+    yield return indexRequest.SendWebRequest();
+
+    if (indexRequest.result != UnityWebRequest.Result.Success)
+    {
+        Debug.LogError($"Failed to load gesture index: {indexRequest.error}");
+        yield break;
+    }
+
+    string[] files = indexRequest.downloadHandler.text.Split('\n');
+
+    foreach (string file in files)
+    {
+        if (!file.EndsWith(".json")) continue;
+
+        string fullPath = Path.Combine(GesturePath, file.Trim());
+
+        using UnityWebRequest gestureRequest = UnityWebRequest.Get(fullPath);
+        yield return gestureRequest.SendWebRequest();
+
+        if (gestureRequest.result != UnityWebRequest.Result.Success)
+            continue;
+
+        Gesture g = JsonConvert.DeserializeObject<Gesture>(gestureRequest.downloadHandler.text);
+        if (g != null) gestures.Add(g);
+    }
+#else
+        // Editor + PC + Quest (filesystem-safe)
+        foreach (string file in Directory.GetFiles(GesturePath, "*.json"))
+        {
+            Gesture g = JsonConvert.DeserializeObject<Gesture>(File.ReadAllText(file));
+            if (g != null) gestures.Add(g);
+        }
+#endif
+
+        gestureSet = gestures.ToArray();
+        Debug.Log($"Loaded {gestureSet.Length} gestures");
+
+        yield return new WaitForSeconds(0.5f);
+        ClearData();
+
+    }
+
+    #endregion
+
+    #region Trigger Handling
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"Collision Detected: {other.gameObject.name}");
+        if (!other.TryGetComponent(out FingerTipCollider finger)) return;
+        if (finger.FingerType != FingerType.Index) return;
 
-        if (!other.gameObject.TryGetComponent(out FingerTipCollider fingertip))
-            return;
-
-        if (fingertip.FingerType != FingerType.Index)
-            return;
-
-        // Capture the plane orientation at the START of the gesture
-        planeNormal = transform.forward;
-        planePosition = transform.position;
-        drawingPlane = new Plane(planeNormal, planePosition);
-
-        activeFinger = fingertip;
-        recordInput = true;
-
-        // Clear previous data
-        samplesWorld3D.Clear();
-        rawSamplesWorld3D.Clear();
-        projectedLineRenderer.positionCount = 0;
-        rawLineRenderer.positionCount = 0;
-
-        // Get first points
-        Vector3 rawWorldPos = activeFinger.transform.position;
-        Vector3 projectedWorldPos = GetProjectedWorldPoint(rawWorldPos);
-
-        lastRawSampleWorld = rawWorldPos;
-        lastSampleWorld = projectedWorldPos;
-
-        rawSamplesWorld3D.Add(rawWorldPos);
-        samplesWorld3D.Add(projectedWorldPos);
-
-        AddRawLinePoint(rawWorldPos);
-        AddProjectedLinePoint(projectedWorldPos);
-
-        Debug.Log($"Started recording - Raw: {rawWorldPos}, Projected: {projectedWorldPos}");
+        BeginGesture(finger);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (!recordInput || activeFinger == null)
-            return;
+        if (!isRecording || !other.TryGetComponent(out FingerTipCollider finger)) return;
+        if (finger != activeFinger) return;
 
-        if (!other.gameObject.TryGetComponent(out FingerTipCollider fingertip))
-            return;
-
-        if (fingertip != activeFinger)
-            return;
-
-        SampleFingerPosition();
+        SampleFinger();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.gameObject.TryGetComponent(out FingerTipCollider fingertip))
+        if (!other.TryGetComponent(out FingerTipCollider finger)) return;
+        if (finger != activeFinger) return;
+
+        EndGesture();
+    }
+
+    #endregion
+
+    #region Gesture Recording
+
+    private void BeginGesture(FingerTipCollider finger)
+    {
+        activeFinger = finger;
+        isRecording = true;
+
+        planeNormal = transform.forward;
+        planeOrigin = transform.position;
+        drawingPlane = new Plane(planeNormal, planeOrigin);
+
+        ClearData();
+
+        Vector3 raw = finger.transform.position;
+        Vector3 projected = ProjectToPlane(raw);
+
+        lastRawSample = raw;
+        lastProjectedSample = projected;
+
+        rawSamples.Add(raw);
+        projectedSamples.Add(projected);
+
+        AddLinePoint(rawLine, raw);
+        AddLinePoint(projectedLine, projected);
+    }
+
+    private void SampleFinger()
+    {
+        Vector3 raw = activeFinger.transform.position;
+        Vector3 projected = ProjectToPlane(raw);
+
+        if (Vector3.Distance(projected, lastProjectedSample) < sampleThreshold)
             return;
 
-        if (fingertip != activeFinger)
-            return;
+        rawSamples.Add(raw);
+        projectedSamples.Add(projected);
 
-        recordInput = false;
+        lastRawSample = raw;
+        lastProjectedSample = projected;
+
+        AddLinePoint(rawLine, raw);
+        AddLinePoint(projectedLine, projected);
+    }
+
+    private void EndGesture()
+    {
+        isRecording = false;
         activeFinger = null;
 
-        Debug.Log($"Gesture finished - Raw samples: {rawSamplesWorld3D.Count}, Projected samples: {samplesWorld3D.Count}");
+        int sampleCount = projectedSamples.Count;
 
-        if (samplesWorld3D.Count > 1)
+        if (logGestureDebug)
         {
-            // Convert world samples to 2D on the plane for PDollar
-            List<Vector2> samples2D = ConvertWorldSamplesToPlane2D();
+            Debug.Log(
+                $"Gesture finished | Raw samples: {rawSamples.Count}, " +
+                $"Projected samples: {sampleCount}"
+            );
+        }
 
-            Debug.Log($"2D Samples range: X[{samples2D.Min(p => p.x):F3}, {samples2D.Max(p => p.x):F3}] Y[{samples2D.Min(p => p.y):F3}, {samples2D.Max(p => p.y):F3}]");
-
-            // Convert all the Vector2 Points into PDollar Points
-            CurrentPointSet = new Point[samples2D.Count];
-            for (int i = 0; i < samples2D.Count; i++)
+        // Skip recognition if not enough samples
+        if (sampleCount < 20)
+        {
+            if (logGestureDebug)
             {
-                CurrentPointSet[i] = new Point(samples2D[i].x, samples2D[i].y, 0);
+                Debug.LogWarning(
+                    $"Gesture skipped — insufficient samples ({sampleCount} < 30)"
+                );
             }
 
-            Debug.Log($"Converted {CurrentPointSet.Length} points for PDollar recognition");
-        }
-
-        if (RecogniseGesture) {
-            CurrentGesture = new Gesture(CurrentPointSet);
-            string letterName = QDollarGestureRecognizer.QPointCloudRecognizer.Classify(CurrentGesture, GestureSet);
-            print($"Recognised Gesture : {letterName}");
-            GameManager.Instance.InsertCharacter(letterName.ToLower()[0]);
-        }
-    }
-
-    private void SampleFingerPosition()
-    {
-        if (!recordInput || activeFinger == null)
+            ClearData();
+            currentGesture = null;
+            currentPointSet = null;
             return;
+        }
 
-        Vector3 rawWorldPos = activeFinger.transform.position;
-        Vector3 projectedWorldPos = GetProjectedWorldPoint(rawWorldPos);
+        // Convert projected 3D samples to 2D plane space
+        List<Vector2> points2D = ProjectSamplesTo2D();
 
-        float rawDistance = Vector3.Distance(rawWorldPos, lastRawSampleWorld);
-        float projectedDistance = Vector3.Distance(projectedWorldPos, lastSampleWorld);
-
-        // Use projected distance for threshold (you could use raw distance instead if preferred)
-        if (projectedDistance >= threshold)
+        if (logGestureDebug && points2D.Count > 0)
         {
-            rawSamplesWorld3D.Add(rawWorldPos);
-            samplesWorld3D.Add(projectedWorldPos);
+            float minX = points2D.Min(p => p.x);
+            float maxX = points2D.Max(p => p.x);
+            float minY = points2D.Min(p => p.y);
+            float maxY = points2D.Max(p => p.y);
 
-            lastRawSampleWorld = rawWorldPos;
-            lastSampleWorld = projectedWorldPos;
+            Debug.Log(
+                $"2D Sample Range | X[{minX:F3}, {maxX:F3}] " +
+                $"Y[{minY:F3}, {maxY:F3}]"
+            );
+        }
 
-            AddRawLinePoint(rawWorldPos);
-            AddProjectedLinePoint(projectedWorldPos);
+        // Build PDollar point set
+        currentPointSet = points2D
+            .Select(p => new Point(p.x, p.y, 0))
+            .ToArray();
 
-            if (showDebugPlane)
-            {
-                Debug.Log($"Sample #{samplesWorld3D.Count}: Raw={rawWorldPos}, Projected={projectedWorldPos}, distance={projectedDistance:F4}");
-            }
+        if (recogniseGesture && gestureSet?.Length > 0)
+        {
+            currentGesture = new Gesture(currentPointSet);
+
+            string result = QDollarGestureRecognizer.QPointCloudRecognizer
+                .Classify(currentGesture, gestureSet);
+
+            if (logGestureDebug)
+                Debug.Log($"Recognised Gesture: {result}");
+
+            GameManager.Instance.InsertCharacter(result.ToLower()[0]);
         }
     }
 
-    private Vector3 GetProjectedWorldPoint(Vector3 worldPoint)
-    {
-        // Project onto the FIXED plane (captured at gesture start)
-        float distance = drawingPlane.GetDistanceToPoint(worldPoint);
-        Vector3 projectedWorld = worldPoint - planeNormal * distance;
 
-        return projectedWorld;
-    }
+    #endregion
 
-    private void AddRawLinePoint(Vector3 worldPoint)
-    {
-        // Convert world point to local space relative to this transform
-        Vector3 localPoint = transform.InverseTransformPoint(worldPoint);
+    #region Tap Gestures
 
-        int index = rawLineRenderer.positionCount;
-        rawLineRenderer.positionCount = index + 1;
-        rawLineRenderer.SetPosition(index, localPoint);
-    }
-
-    private void AddProjectedLinePoint(Vector3 worldPoint)
-    {
-        // Convert world point to local space relative to this transform
-        Vector3 localPoint = transform.InverseTransformPoint(worldPoint);
-
-        int index = projectedLineRenderer.positionCount;
-        projectedLineRenderer.positionCount = index + 1;
-        projectedLineRenderer.SetPosition(index, localPoint);
-    }
-
-    private List<Vector2> ConvertWorldSamplesToPlane2D()
-    {
-        // Create a coordinate system on the plane
-        Vector3 planeRight = Vector3.Cross(Vector3.up, planeNormal).normalized;
-        if (planeRight.magnitude < 0.1f) // Handle case where normal is up/down
-            planeRight = Vector3.Cross(Vector3.forward, planeNormal).normalized;
-
-        Vector3 planeUp = Vector3.Cross(planeNormal, planeRight).normalized;
-
-        List<Vector2> samples2D = new List<Vector2>();
-
-        foreach (Vector3 worldSample in samplesWorld3D)
-        {
-            // Get vector from plane origin to sample
-            Vector3 offset = worldSample - planePosition;
-
-            // Project onto plane's 2D coordinate system
-            float x = Vector3.Dot(offset, planeRight);
-            float y = Vector3.Dot(offset, planeUp);
-
-            samples2D.Add(new Vector2(x, y));
-        }
-
-        return samples2D;
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (!showDebugPlane)
-            return;
-
-        // Draw the current palm orientation
-        Gizmos.color = Color.yellow;
-        Vector3 center = transform.position;
-        Vector3 normal = transform.forward;
-
-        Vector3 right = transform.right * 0.05f;
-        Vector3 up = transform.up * 0.05f;
-
-        Vector3 p1 = center + right + up;
-        Vector3 p2 = center - right + up;
-        Vector3 p3 = center - right - up;
-        Vector3 p4 = center + right - up;
-
-        Gizmos.DrawLine(p1, p2);
-        Gizmos.DrawLine(p2, p3);
-        Gizmos.DrawLine(p3, p4);
-        Gizmos.DrawLine(p4, p1);
-
-        // Draw the FIXED plane (if recording)
-        if (Application.isPlaying && recordInput)
-        {
-            Gizmos.color = Color.green;
-
-            Vector3 fixedRight = Vector3.Cross(Vector3.up, planeNormal).normalized * 0.05f;
-            if (fixedRight.magnitude < 0.01f)
-                fixedRight = Vector3.Cross(Vector3.forward, planeNormal).normalized * 0.05f;
-            Vector3 fixedUp = Vector3.Cross(planeNormal, fixedRight).normalized * 0.05f;
-
-            p1 = planePosition + fixedRight + fixedUp;
-            p2 = planePosition - fixedRight + fixedUp;
-            p3 = planePosition - fixedRight - fixedUp;
-            p4 = planePosition + fixedRight - fixedUp;
-
-            Gizmos.DrawLine(p1, p2);
-            Gizmos.DrawLine(p2, p3);
-            Gizmos.DrawLine(p3, p4);
-            Gizmos.DrawLine(p4, p1);
-
-            // Draw normal
-            Gizmos.color = Color.blue;
-            Gizmos.DrawRay(planePosition, planeNormal * 0.05f);
-        }
-
-        // Draw collected projected samples (green)
-        if (Application.isPlaying && samplesWorld3D.Count > 0)
-        {
-            Gizmos.color = Color.green;
-            for (int i = 0; i < samplesWorld3D.Count - 1; i++)
-            {
-                Gizmos.DrawLine(samplesWorld3D[i], samplesWorld3D[i + 1]);
-            }
-
-            // Draw sample points
-            Gizmos.color = Color.cyan;
-            foreach (Vector3 sample in samplesWorld3D)
-            {
-                Gizmos.DrawSphere(sample, 0.002f);
-            }
-        }
-
-        // Draw collected raw samples (red)
-        if (Application.isPlaying && rawSamplesWorld3D.Count > 0)
-        {
-            Gizmos.color = Color.red;
-            for (int i = 0; i < rawSamplesWorld3D.Count - 1; i++)
-            {
-                Gizmos.DrawLine(rawSamplesWorld3D[i], rawSamplesWorld3D[i + 1]);
-            }
-
-            // Draw sample points
-            Gizmos.color = Color.magenta;
-            foreach (Vector3 sample in rawSamplesWorld3D)
-            {
-                Gizmos.DrawSphere(sample, 0.002f);
-            }
-        }
-    }
-
-    private float indexTapCooldown = 0.5f;
-    private float middleTapCooldown = 0.5f;
+    [SerializeField] private float indexTapCooldown = 0.5f;
+    [SerializeField] private float middleTapCooldown = 0.5f;
 
     private float lastIndexTapTime = -Mathf.Infinity;
     private float lastMiddleTapTime = -Mathf.Infinity;
 
     public void OnIndexTapped()
     {
-        float timeSinceLastTap = Time.time - lastIndexTapTime;
-
-        if (timeSinceLastTap < indexTapCooldown)
-        {
-            Debug.Log($"Index tap on cooldown. Wait {indexTapCooldown - timeSinceLastTap:F2}s");
+        if (Time.time - lastIndexTapTime < indexTapCooldown)
             return;
-        }
 
         lastIndexTapTime = Time.time;
         GameManager.Instance.DeleteCharacter();
     }
 
-
-    public void OnMiddletapped()
+    public void OnMiddleTapped()
     {
-        float timeSinceLastTap = Time.time - lastMiddleTapTime;
-
-        if (timeSinceLastTap < middleTapCooldown)
-        {
-            Debug.Log($"Middle tap on cooldown. Wait {middleTapCooldown - timeSinceLastTap:F2}s");
+        if (Time.time - lastMiddleTapTime < middleTapCooldown)
             return;
-        }
 
         lastMiddleTapTime = Time.time;
         GameManager.Instance.InsertCharacter(' ');
     }
 
+    #endregion
 
-    public void SaveGesture(string letterName)
+
+    #region Math & Helpers
+
+    private Vector3 ProjectToPlane(Vector3 worldPoint)
     {
-        // Check if we have points to save
-        if (CurrentPointSet == null || CurrentPointSet.Length == 0)
-        {
-            CurrentGesture = null;
-            CurrentPointSet = null;
-            samplesWorld3D.Clear();
-            rawSamplesWorld3D.Clear();
+        float distance = drawingPlane.GetDistanceToPoint(worldPoint);
+        return worldPoint - planeNormal * distance;
+    }
 
-            projectedLineRenderer.positionCount = 0;
-            rawLineRenderer.positionCount = 0;
+    private List<Vector2> ProjectSamplesTo2D()
+    {
+        Vector3 right = Vector3.Cross(Vector3.up, planeNormal);
+        if (right.sqrMagnitude < 0.001f)
+            right = Vector3.Cross(Vector3.forward, planeNormal);
 
-            Debug.LogWarning("No gesture points to save!");
-            return;
-        }
+        right.Normalize();
+        Vector3 up = Vector3.Cross(planeNormal, right);
 
-        // Create gesture with the accumulated points
-        CurrentGesture = new Gesture(CurrentPointSet);
-        CurrentGesture.Name = letterName;
+        return projectedSamples
+            .Select(p =>
+            {
+                Vector3 offset = p - planeOrigin;
+                return new Vector2(
+                    Vector3.Dot(offset, right),
+                    Vector3.Dot(offset, up)
+                );
+            })
+            .ToList();
+    }
 
-        // Find the next available file number
-        int fileNumber = 1;
-        string fileName;
-        string fullPath;
+    private void SetupLineRenderer(LineRenderer lr)
+    {
+        lr.useWorldSpace = false;
+        lr.startWidth = lineWidth;
+        lr.endWidth = lineWidth;
+        lr.positionCount = 0;
+    }
 
+    private void AddLinePoint(LineRenderer lr, Vector3 worldPoint)
+    {
+        Vector3 local = transform.InverseTransformPoint(worldPoint);
+        lr.positionCount++;
+        lr.SetPosition(lr.positionCount - 1, local);
+    }
+
+    private void ClearData()
+    {
+        projectedSamples.Clear();
+        rawSamples.Clear();
+        projectedLine.positionCount = 0;
+        rawLine.positionCount = 0;
+    }
+
+    #endregion
+
+    #region Saving
+
+    public void SaveGesture(string name)
+    {
+        if (currentPointSet == null || currentPointSet.Length == 0) return;
+
+        Gesture g = new Gesture(currentPointSet) { Name = name };
+
+        Directory.CreateDirectory(GesturePath);
+
+        int i = 1;
+        string path;
         do
         {
-            fileName = $"{letterName.ToLower()}_{fileNumber}.json";
-            fullPath = Path.Combine(gestureSavePath, fileName);
-            fileNumber++;
-        } while (File.Exists(fullPath));
+            path = Path.Combine(GesturePath, $"{name}_{i}.json");
+            i++;
+        } while (File.Exists(path));
 
-        // Serialize and save the gesture
-        string jsonData = JsonConvert.SerializeObject(CurrentGesture);
-        File.WriteAllText(fullPath, jsonData);
+        File.WriteAllText(path, JsonConvert.SerializeObject(g));
 
-        Debug.Log($"Gesture saved to: {fullPath}");
+        ClearData();
+        currentGesture = null;
+        currentPointSet = null;
 
-        // Clear all data and create new gesture reference
-        CurrentGesture = null;
-        CurrentPointSet = null;
-        samplesWorld3D.Clear();
-        rawSamplesWorld3D.Clear();
-
-        // Clear line renderers
-        projectedLineRenderer.positionCount = 0;
-        rawLineRenderer.positionCount = 0;
-
-        Debug.Log($"Gesture data cleared. Ready for new gesture.");
+        Debug.Log($"Saved gesture: {path}");
     }
+
+    #endregion
 }

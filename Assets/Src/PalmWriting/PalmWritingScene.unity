@@ -215,15 +215,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445935482}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7200063, y: 0, z: 0, w: 0.6939676}
-  m_LocalPosition: {x: -0.00172, y: -0.0287, z: 0.06364}
-  m_LocalScale: {x: 0.080003954, y: 0.075681195, z: 0.07}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: -0.7187333, y: 0, z: 0, w: 0.6952859}
+  m_LocalPosition: {x: -0.00172, y: -0.02989, z: 0.06369}
+  m_LocalScale: {x: 0.080003954, y: 0.075681195, z: -0.012947347}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1502277505}
   - {fileID: 1384157521}
   m_Father: {fileID: 1647191981}
-  m_LocalEulerAnglesHint: {x: -92.11, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -91.9, y: 0, z: 0}
 --- !u!64 &445935484
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &445935485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445935482}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &445935487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,14 +315,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7d4564ce821ed48b060b6d6c5f1182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PalmInputHandler
-  threshold: 0.0002
-  projectedLineRenderer: {fileID: 1502277506}
-  rawLineRenderer: {fileID: 1384157522}
+  sampleThreshold: 0.001
+  projectedLine: {fileID: 1502277506}
+  rawLine: {fileID: 1384157522}
   lineWidth: 0.005
-  projectedLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
-  rawLineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  recogniseGesture: 1
+  logGestureDebug: 1
   showDebugPlane: 0
-  RecogniseGesture: 1
+  indexTapCooldown: 0.5
+  middleTapCooldown: 0.5
 --- !u!1 &672529436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,8 +1062,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0, a: 1}
-      key1: {r: 1, g: 0, b: 0, a: 1}
+      key0: {r: 1, g: 0, b: 0, a: 0}
+      key1: {r: 1, g: 0, b: 0, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1203,8 +1204,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.14509821, g: 1, b: 0, a: 0}
-      key1: {r: 0.14509805, g: 1, b: 0, a: 0}
+      key0: {r: 0.14509821, g: 1, b: 0, a: 1}
+      key1: {r: 0.14509805, g: 1, b: 0, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1323,7 +1324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnMiddletapped
+      value: OnMiddleTapped
       objectReference: {fileID: 0}
     - target: {fileID: 7060023623741212828, guid: c9986303c43124446a864509ebbca037, type: 3}
       propertyPath: OnFingerTipCollide.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
